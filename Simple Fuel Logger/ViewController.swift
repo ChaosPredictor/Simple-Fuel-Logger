@@ -13,15 +13,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var fuelField: UITextField!
     @IBOutlet weak var distnceField: UITextField!
     
+    @IBAction func button(_ sender: UIButton) {
+        moveToNextResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        fuelField.becomeFirstResponder()
+        
         
         fuelField.addButtonsOnKeyboard()
         distnceField.addButtonsOnKeyboard()
+
         //textField.upButtonAction()
     }
 
+    func moveToNextResponder() {
+        if fuelField.isFirstResponder {
+            distnceField.becomeFirstResponder()
+        } else {
+            fuelField.becomeFirstResponder()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
