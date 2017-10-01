@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        textField.addDoneButtonOnKeyboard()
-        textField.doneButtonAction()
+        textField.addButtonsOnKeyboard()
+        //textField.upButtonAction()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,29 +40,38 @@ extension UITextField{
         }
         set (hasDone) {
             if hasDone{
-                addDoneButtonOnKeyboard()
+                addButtonsOnKeyboard()
             }
         }
     }
     
-    func addDoneButtonOnKeyboard()
+    func addButtonsOnKeyboard()
     {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         doneToolbar.barStyle = .default
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let up: UIBarButtonItem = UIBarButtonItem(title: "△", style: .done, target: self, action: #selector(self.upButtonAction))
+        let down: UIBarButtonItem = UIBarButtonItem(title: "▽", style: .done, target: self, action: #selector(self.downButtonAction))
         let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
+
         
-        let items = [flexSpace, done]
+        let items = [flexSpace, up, down, done]
         doneToolbar.items = items
         doneToolbar.sizeToFit()
         
         self.inputAccessoryView = doneToolbar
     }
     
-    @objc func doneButtonAction()
-    {
-        print("dsfsdf")
-        //self.resignFirstResponder()
+    @objc func upButtonAction() {
+        print("up")
+    }
+    
+    @objc func downButtonAction() {
+        print("down")
+    }
+
+    @objc func doneButtonAction() {
+        print("done")
     }
 }
