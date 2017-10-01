@@ -10,13 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var fuelField: UITextField!
+    @IBOutlet weak var distnceField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        textField.addButtonsOnKeyboard()
+        fuelField.addButtonsOnKeyboard()
+        distnceField.addButtonsOnKeyboard()
         //textField.upButtonAction()
     }
 
