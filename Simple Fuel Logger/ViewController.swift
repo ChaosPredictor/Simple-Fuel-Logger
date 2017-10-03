@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var fuelField: UITextField!
     @IBOutlet weak var distnceField: UITextField!
+    @IBOutlet weak var priceField: UITextField!
     
     @IBAction func button(_ sender: UIButton) {
         moveToNextResponder()
@@ -34,7 +35,11 @@ class ViewController: UIViewController {
         if fuelField.isFirstResponder {
             distnceField.becomeFirstResponder()
         } else {
-            fuelField.becomeFirstResponder()
+            if distnceField.isFirstResponder {
+                priceField.becomeFirstResponder()
+            } else {
+                fuelField.becomeFirstResponder()
+            }
         }
     }
     
