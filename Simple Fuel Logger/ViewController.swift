@@ -20,15 +20,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         fuelField.becomeFirstResponder()
-        
-        
         fuelField.addButtonsOnKeyboard()
         distnceField.addButtonsOnKeyboard()
+        priceField.addButtonsOnKeyboard()
 
-        //textField.upButtonAction()
     }
 
     func moveToNextResponder() {
@@ -54,14 +51,17 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
 
+
+    
     func resignFirstResponder() {
         print("dsf")
     }
-
+    
 }
 
-extension UITextField{
-    @IBInspectable var doneAccessory: Bool{
+extension UITextField {
+    
+    @IBInspectable var doneAccessory: Bool {
         get{
             return self.doneAccessory
         }
@@ -72,8 +72,7 @@ extension UITextField{
         }
     }
     
-    func addButtonsOnKeyboard()
-    {
+    func addButtonsOnKeyboard() {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         doneToolbar.barStyle = .default
         
@@ -89,7 +88,7 @@ extension UITextField{
         
         self.inputAccessoryView = doneToolbar
     }
-    
+
     @objc func upButtonAction() {
         print("up")
     }
