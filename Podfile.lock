@@ -1,0 +1,12 @@
+PODS:
+  - UITextField-Navigation (3.0.0)
+
+DEPENDENCIES:
+  - UITextField-Navigation
+
+SPEC CHECKSUMS:
+  UITextField-Navigation: 20e317ede7db16990db5b42fedaaaa32997ef614
+
+PODFILE CHECKSUM: 1113604319f5121246df94da418637f34962d767
+
+COCOAPODS: 1.3.1

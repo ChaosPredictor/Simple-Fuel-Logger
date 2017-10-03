@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10A63CB655F700A068FE37F0613BF8E5 /* NavigationFieldToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258DDCF75A3610EACEBFEBC2B48EEEE /* NavigationFieldToolbarButtonItem.swift */; };
+		145F280253336D1450E3FDD0A17B7CB5 /* NavigationFieldToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21975963563A0AC2078E3465C909163 /* NavigationFieldToolbar.swift */; };
+		2D1BC36667890BEF328A2600CEE58A54 /* NavigationFieldInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC52E14DF44CDD54E79300DAD15E9F7 /* NavigationFieldInternal.swift */; };
+		306FD00DE960D6D728C20224B4C5DC44 /* NavigationFieldImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3164894191956AC43FBE5114DF8E200 /* NavigationFieldImplementations.swift */; };
+		362B0430DAD650C6F05F826A15B0EF30 /* Pods-Simple Fuel Logger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 249A41E7E834A77374B5CA63CAAA8CBB /* Pods-Simple Fuel Logger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		471B13C57820A5029079CB36BCF8D5B0 /* UITextField-Navigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B246904B15C2FDE7DD53B7536A8304ED /* UITextField-Navigation-dummy.m */; };
+		777B1B9882656D3CC2AFE04084642D22 /* UITextField-Navigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2279304119EE5E8B257A78D4F8BE8783 /* UITextField-Navigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78C12DF13B6A3FCEBD31430CB836C56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		7E98EB32C35DB45D5B1F5CD569AA3C64 /* Pods-Simple Fuel Logger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13E26AE82370A7E137304FD61129A7 /* Pods-Simple Fuel Logger-dummy.m */; };
+		A8E99ABFE45B3477CCA0B0BC3C222F7C /* NavigationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC7A3CE19A151EFF02F3919D16FFE27 /* NavigationField.swift */; };
+		B9B932C47E58B426F052073E95DE7A35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		C0C8E66FED152514FD8F925BAADE42FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		ED898E8066D32A7D15F8F8C8C2729CFE /* WeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DFE0D0553E0E535E99F2181EC927E /* WeakObjectContainer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7C7002B24C595EE458F3E125A2467E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5623E89CCBCD47B63576FF758108F45A;
+			remoteInfo = "UITextField-Navigation";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10145BE029AA53BF00759D61F6D99C71 /* Pods-Simple Fuel Logger-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Simple Fuel Logger-resources.sh"; sourceTree = "<group>"; };
+		1E5399B99513D0CAA7F0CB213FB717A1 /* Pods-Simple Fuel Logger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Fuel Logger.debug.xcconfig"; sourceTree = "<group>"; };
+		2279304119EE5E8B257A78D4F8BE8783 /* UITextField-Navigation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-umbrella.h"; sourceTree = "<group>"; };
+		249A41E7E834A77374B5CA63CAAA8CBB /* Pods-Simple Fuel Logger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Simple Fuel Logger-umbrella.h"; sourceTree = "<group>"; };
+		3E13E26AE82370A7E137304FD61129A7 /* Pods-Simple Fuel Logger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Simple Fuel Logger-dummy.m"; sourceTree = "<group>"; };
+		3ED22BF23C7CC280CA12888573F36A9D /* Pods-Simple Fuel Logger-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Simple Fuel Logger-frameworks.sh"; sourceTree = "<group>"; };
+		571785CD751DB440C28C796536B48898 /* Pods_Simple_Fuel_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Simple_Fuel_Logger.framework; path = "Pods-Simple Fuel Logger.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		712DFE0D0553E0E535E99F2181EC927E /* WeakObjectContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakObjectContainer.swift; path = "UITextField-Navigation/Classes/WeakObjectContainer.swift"; sourceTree = "<group>"; };
+		7F40A68ED87E9E0D64A5DB748C6ECF5D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9258DDCF75A3610EACEBFEBC2B48EEEE /* NavigationFieldToolbarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldToolbarButtonItem.swift; path = "UITextField-Navigation/Classes/NavigationFieldToolbarButtonItem.swift"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		955AE219287E1C7DAA731F92F8401EFF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98F47637B73D53BC7337DDE5EAB198EB /* Pods-Simple Fuel Logger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Fuel Logger.release.xcconfig"; sourceTree = "<group>"; };
+		9D331EF64F605526367BB4E9986BB1F6 /* UITextField-Navigation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-prefix.pch"; sourceTree = "<group>"; };
+		A21975963563A0AC2078E3465C909163 /* NavigationFieldToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldToolbar.swift; path = "UITextField-Navigation/Classes/NavigationFieldToolbar.swift"; sourceTree = "<group>"; };
+		B246904B15C2FDE7DD53B7536A8304ED /* UITextField-Navigation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField-Navigation-dummy.m"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C98D1088612978B4EAD43B69F3692CA5 /* Pods-Simple Fuel Logger-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Simple Fuel Logger-acknowledgements.plist"; sourceTree = "<group>"; };
+		CE03902BBB62AE43B00B9A0D48C8252C /* UITextField-Navigation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextField-Navigation.xcconfig"; sourceTree = "<group>"; };
+		D219BB783191DF3D0C53B177B9891B48 /* Pods-Simple Fuel Logger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Simple Fuel Logger.modulemap"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DCD0E6C0280F9D2955DB8DFD94E4D183 /* UITextField-Navigation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "UITextField-Navigation.modulemap"; sourceTree = "<group>"; };
+		DE85658E87D2D96064027344052A2C91 /* Pods-Simple Fuel Logger-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Simple Fuel Logger-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DEC7A3CE19A151EFF02F3919D16FFE27 /* NavigationField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationField.swift; path = "UITextField-Navigation/Classes/NavigationField.swift"; sourceTree = "<group>"; };
+		E3164894191956AC43FBE5114DF8E200 /* NavigationFieldImplementations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldImplementations.swift; path = "UITextField-Navigation/Classes/NavigationFieldImplementations.swift"; sourceTree = "<group>"; };
+		EFC52E14DF44CDD54E79300DAD15E9F7 /* NavigationFieldInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldInternal.swift; path = "UITextField-Navigation/Classes/NavigationFieldInternal.swift"; sourceTree = "<group>"; };
+		F4B43581524FF01E48A26BA663437E4F /* UITextField_Navigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UITextField_Navigation.framework; path = "UITextField-Navigation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C37BE08D3F2701E48AA05F92A67E621 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B932C47E58B426F052073E95DE7A35 /* Foundation.framework in Frameworks */,
+				C0C8E66FED152514FD8F925BAADE42FB /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9415A62BC8E3DD81528F62A33D976CE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C12DF13B6A3FCEBD31430CB836C56F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5495472CEC0B68D3BB1F68D2CA836BD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75F01F715A805F0BDDDB766FD086BA00 /* UITextField-Navigation */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		75F01F715A805F0BDDDB766FD086BA00 /* UITextField-Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				DEC7A3CE19A151EFF02F3919D16FFE27 /* NavigationField.swift */,
+				E3164894191956AC43FBE5114DF8E200 /* NavigationFieldImplementations.swift */,
+				EFC52E14DF44CDD54E79300DAD15E9F7 /* NavigationFieldInternal.swift */,
+				A21975963563A0AC2078E3465C909163 /* NavigationFieldToolbar.swift */,
+				9258DDCF75A3610EACEBFEBC2B48EEEE /* NavigationFieldToolbarButtonItem.swift */,
+				712DFE0D0553E0E535E99F2181EC927E /* WeakObjectContainer.swift */,
+				E03C31E1F3B5C2226684D8255979D687 /* Support Files */,
+			);
+			name = "UITextField-Navigation";
+			path = "UITextField-Navigation";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				5495472CEC0B68D3BB1F68D2CA836BD3 /* Pods */,
+				7DF0101551293919AC3B8805F8F0A4FC /* Products */,
+				D1F083E2261C539D3DEC50A77F826D3A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7DF0101551293919AC3B8805F8F0A4FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				571785CD751DB440C28C796536B48898 /* Pods_Simple_Fuel_Logger.framework */,
+				F4B43581524FF01E48A26BA663437E4F /* UITextField_Navigation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C4D112768E02B345572B935A9214218 /* Pods-Simple Fuel Logger */ = {
+			isa = PBXGroup;
+			children = (
+				955AE219287E1C7DAA731F92F8401EFF /* Info.plist */,
+				D219BB783191DF3D0C53B177B9891B48 /* Pods-Simple Fuel Logger.modulemap */,
+				DE85658E87D2D96064027344052A2C91 /* Pods-Simple Fuel Logger-acknowledgements.markdown */,
+				C98D1088612978B4EAD43B69F3692CA5 /* Pods-Simple Fuel Logger-acknowledgements.plist */,
+				3E13E26AE82370A7E137304FD61129A7 /* Pods-Simple Fuel Logger-dummy.m */,
+				3ED22BF23C7CC280CA12888573F36A9D /* Pods-Simple Fuel Logger-frameworks.sh */,
+				10145BE029AA53BF00759D61F6D99C71 /* Pods-Simple Fuel Logger-resources.sh */,
+				249A41E7E834A77374B5CA63CAAA8CBB /* Pods-Simple Fuel Logger-umbrella.h */,
+				1E5399B99513D0CAA7F0CB213FB717A1 /* Pods-Simple Fuel Logger.debug.xcconfig */,
+				98F47637B73D53BC7337DDE5EAB198EB /* Pods-Simple Fuel Logger.release.xcconfig */,
+			);
+			name = "Pods-Simple Fuel Logger";
+			path = "Target Support Files/Pods-Simple Fuel Logger";
+			sourceTree = "<group>";
+		};
+		D1F083E2261C539D3DEC50A77F826D3A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C4D112768E02B345572B935A9214218 /* Pods-Simple Fuel Logger */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E03C31E1F3B5C2226684D8255979D687 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F40A68ED87E9E0D64A5DB748C6ECF5D /* Info.plist */,
+				DCD0E6C0280F9D2955DB8DFD94E4D183 /* UITextField-Navigation.modulemap */,
+				CE03902BBB62AE43B00B9A0D48C8252C /* UITextField-Navigation.xcconfig */,
+				B246904B15C2FDE7DD53B7536A8304ED /* UITextField-Navigation-dummy.m */,
+				9D331EF64F605526367BB4E9986BB1F6 /* UITextField-Navigation-prefix.pch */,
+				2279304119EE5E8B257A78D4F8BE8783 /* UITextField-Navigation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UITextField-Navigation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0301F416CCEE3BBD84CC6D4D88C7EADD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362B0430DAD650C6F05F826A15B0EF30 /* Pods-Simple Fuel Logger-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAA32E2FED95B9DC6B39DABBE4774EEE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				777B1B9882656D3CC2AFE04084642D22 /* UITextField-Navigation-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5623E89CCBCD47B63576FF758108F45A /* UITextField-Navigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13207BB0BC0F6332883469F5A051ACCA /* Build configuration list for PBXNativeTarget "UITextField-Navigation" */;
+			buildPhases = (
+				36862C1019873E2C1FF3C9305D695563 /* Sources */,
+				7C37BE08D3F2701E48AA05F92A67E621 /* Frameworks */,
+				CAA32E2FED95B9DC6B39DABBE4774EEE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UITextField-Navigation";
+			productName = "UITextField-Navigation";
+			productReference = F4B43581524FF01E48A26BA663437E4F /* UITextField_Navigation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9A41BECB162F493F1B6F710A03C3D893 /* Pods-Simple Fuel Logger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6F15D6B4D3532D1B36C7307F8F8EA3D /* Build configuration list for PBXNativeTarget "Pods-Simple Fuel Logger" */;
+			buildPhases = (
+				A9298AE82E7D578D4A373B80DC10820E /* Sources */,
+				9415A62BC8E3DD81528F62A33D976CE9 /* Frameworks */,
+				0301F416CCEE3BBD84CC6D4D88C7EADD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAADE846A63B3288C5ED1A72B9073F3F /* PBXTargetDependency */,
+			);
+			name = "Pods-Simple Fuel Logger";
+			productName = "Pods-Simple Fuel Logger";
+			productReference = 571785CD751DB440C28C796536B48898 /* Pods_Simple_Fuel_Logger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 7DF0101551293919AC3B8805F8F0A4FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A41BECB162F493F1B6F710A03C3D893 /* Pods-Simple Fuel Logger */,
+				5623E89CCBCD47B63576FF758108F45A /* UITextField-Navigation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36862C1019873E2C1FF3C9305D695563 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8E99ABFE45B3477CCA0B0BC3C222F7C /* NavigationField.swift in Sources */,
+				306FD00DE960D6D728C20224B4C5DC44 /* NavigationFieldImplementations.swift in Sources */,
+				2D1BC36667890BEF328A2600CEE58A54 /* NavigationFieldInternal.swift in Sources */,
+				145F280253336D1450E3FDD0A17B7CB5 /* NavigationFieldToolbar.swift in Sources */,
+				10A63CB655F700A068FE37F0613BF8E5 /* NavigationFieldToolbarButtonItem.swift in Sources */,
+				471B13C57820A5029079CB36BCF8D5B0 /* UITextField-Navigation-dummy.m in Sources */,
+				ED898E8066D32A7D15F8F8C8C2729CFE /* WeakObjectContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9298AE82E7D578D4A373B80DC10820E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E98EB32C35DB45D5B1F5CD569AA3C64 /* Pods-Simple Fuel Logger-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAADE846A63B3288C5ED1A72B9073F3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UITextField-Navigation";
+			target = 5623E89CCBCD47B63576FF758108F45A /* UITextField-Navigation */;
+			targetProxy = C7C7002B24C595EE458F3E125A2467E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		24D6AE4EBDA1F4ED3B05B3F9304D5910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E5399B99513D0CAA7F0CB213FB717A1 /* Pods-Simple Fuel Logger.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Simple Fuel Logger/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Simple_Fuel_Logger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2F6414CD2A7E31C5BE54A0F5D34CB825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE03902BBB62AE43B00B9A0D48C8252C /* UITextField-Navigation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITextField-Navigation/UITextField-Navigation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITextField-Navigation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITextField-Navigation/UITextField-Navigation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UITextField_Navigation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D08B00DBB77DD8CF374B0D46138B518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F47637B73D53BC7337DDE5EAB198EB /* Pods-Simple Fuel Logger.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Simple Fuel Logger/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Simple_Fuel_Logger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		911C954C025B964992FB389D1FDF12AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE03902BBB62AE43B00B9A0D48C8252C /* UITextField-Navigation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITextField-Navigation/UITextField-Navigation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITextField-Navigation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITextField-Navigation/UITextField-Navigation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UITextField_Navigation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		97803B46811A9BDB5E70FA1303AFBFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13207BB0BC0F6332883469F5A051ACCA /* Build configuration list for PBXNativeTarget "UITextField-Navigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6414CD2A7E31C5BE54A0F5D34CB825 /* Debug */,
+				911C954C025B964992FB389D1FDF12AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97803B46811A9BDB5E70FA1303AFBFFE /* Debug */,
+				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6F15D6B4D3532D1B36C7307F8F8EA3D /* Build configuration list for PBXNativeTarget "Pods-Simple Fuel Logger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24D6AE4EBDA1F4ED3B05B3F9304D5910 /* Debug */,
+				7D08B00DBB77DD8CF374B0D46138B518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CD337D91164DB42D2076061 /* Pods_Simple_Fuel_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC74C44B7A240DE9745FC099 /* Pods_Simple_Fuel_Logger.framework */; };
 		AF177F381F7C37CE00CE7899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF177F371F7C37CE00CE7899 /* AppDelegate.swift */; };
 		AF177F3A1F7C37CE00CE7899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF177F391F7C37CE00CE7899 /* ViewController.swift */; };
 		AF177F3D1F7C37CE00CE7899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF177F3B1F7C37CE00CE7899 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63C1556A5C8C1596EA48B104 /* Pods-Simple Fuel Logger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Fuel Logger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger.release.xcconfig"; sourceTree = "<group>"; };
+		A68B8CC7A9556E85D3F56E0A /* Pods-Simple Fuel Logger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Fuel Logger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger.debug.xcconfig"; sourceTree = "<group>"; };
 		AF177F341F7C37CE00CE7899 /* Simple Fuel Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Fuel Logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF177F371F7C37CE00CE7899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF177F391F7C37CE00CE7899 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		AF177F3E1F7C37CE00CE7899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF177F411F7C37CE00CE7899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF177F431F7C37CE00CE7899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC74C44B7A240DE9745FC099 /* Pods_Simple_Fuel_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Fuel_Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD337D91164DB42D2076061 /* Pods_Simple_Fuel_Logger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F109B38B8534319BF04E337 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC74C44B7A240DE9745FC099 /* Pods_Simple_Fuel_Logger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF177F2B1F7C37CE00CE7899 = {
 			isa = PBXGroup;
 			children = (
 				AF177F361F7C37CE00CE7899 /* Simple Fuel Logger */,
 				AF177F351F7C37CE00CE7899 /* Products */,
+				D5FAAEFA91957DDD434928E4 /* Pods */,
+				1F109B38B8534319BF04E337 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = "Simple Fuel Logger";
 			sourceTree = "<group>";
 		};
+		D5FAAEFA91957DDD434928E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A68B8CC7A9556E85D3F56E0A /* Pods-Simple Fuel Logger.debug.xcconfig */,
+				63C1556A5C8C1596EA48B104 /* Pods-Simple Fuel Logger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF177F461F7C37CE00CE7899 /* Build configuration list for PBXNativeTarget "Simple Fuel Logger" */;
 			buildPhases = (
+				44919F74A8BD1E601D1EE789 /* [CP] Check Pods Manifest.lock */,
 				AF177F301F7C37CE00CE7899 /* Sources */,
 				AF177F311F7C37CE00CE7899 /* Frameworks */,
 				AF177F321F7C37CE00CE7899 /* Resources */,
+				911D3246D34D1FB98B93D616 /* [CP] Embed Pods Frameworks */,
+				15C2BCD4D04AFC502F4EAF11 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15C2BCD4D04AFC502F4EAF11 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44919F74A8BD1E601D1EE789 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simple Fuel Logger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		911D3246D34D1FB98B93D616 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/UITextField-Navigation/UITextField_Navigation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextField_Navigation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF177F301F7C37CE00CE7899 /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		AF177F471F7C37CE00CE7899 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A68B8CC7A9556E85D3F56E0A /* Pods-Simple Fuel Logger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		AF177F481F7C37CE00CE7899 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C1556A5C8C1596EA48B104 /* Pods-Simple Fuel Logger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
