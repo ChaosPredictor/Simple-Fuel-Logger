@@ -55,19 +55,19 @@ public class NavigationFieldToolbar: UIToolbar {
         sizeToFit()
     }
 
-    func previousButtonDidTap() {
+    @objc func previousButtonDidTap() {
         if let navigationDelegate = navigationDelegate {
             navigationDelegate.navigationFieldToolbarDidTapPreviousButton(self)
         }
     }
 
-    func nextButtonDidTap() {
+    @objc func nextButtonDidTap() {
         if let navigationDelegate = navigationDelegate {
             navigationDelegate.navigationFieldToolbarDidTapNextButton(self)
         }
     }
 
-    func doneButtonDidTap() {
+    @objc func doneButtonDidTap() {
         if let navigationDelegate = navigationDelegate {
             navigationDelegate.navigationFieldToolbarDidTapDoneButton(self)
         }
