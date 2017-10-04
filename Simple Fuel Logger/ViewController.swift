@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UITextField_Navigation
 
 class ViewController: UIViewController {
 
@@ -22,9 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         fuelField.becomeFirstResponder()
-        fuelField.addButtonsOnKeyboard()
-        distnceField.addButtonsOnKeyboard()
-        priceField.addButtonsOnKeyboard()
+        fuelField.nextNavigationField = distnceField
+        distnceField.nextNavigationField = priceField
 
     }
 
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     }
     
 }
-
+/*
 extension UITextField {
     
     @IBInspectable var doneAccessory: Bool {
@@ -100,4 +100,4 @@ extension UITextField {
     @objc func doneButtonAction() {
         print("done")
     }
-}
+}*/
