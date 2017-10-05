@@ -9,7 +9,7 @@
 import UIKit
 import UITextField_Navigation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NavigationFieldDelegate {
 
     @IBOutlet weak var fuelField: UITextField!
     @IBOutlet weak var distnceField: UITextField!
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         fuelField.becomeFirstResponder()
         fuelField.nextNavigationField = distnceField
         distnceField.nextNavigationField = priceField
-
+        
     }
 
     func moveToNextResponder() {
@@ -52,52 +52,7 @@ class ViewController: UIViewController {
     }
 
 
-    
-    func resignFirstResponder() {
-        print("dsf")
-    }
-    
 }
-/*
-extension UITextField {
-    
-    @IBInspectable var doneAccessory: Bool {
-        get{
-            return self.doneAccessory
-        }
-        set (hasDone) {
-            if hasDone{
-                addButtonsOnKeyboard()
-            }
-        }
-    }
-    
-    func addButtonsOnKeyboard() {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
-        doneToolbar.barStyle = .default
-        
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let up: UIBarButtonItem = UIBarButtonItem(title: "△", style: .done, target: self, action: #selector(self.upButtonAction))
-        let down: UIBarButtonItem = UIBarButtonItem(title: "▽", style: .done, target: self, action: #selector(self.downButtonAction))
-        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
 
-        
-        let items = [flexSpace, up, down, done]
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        self.inputAccessoryView = doneToolbar
-    }
 
-    @objc func upButtonAction() {
-        print("up")
-    }
-    
-    @objc func downButtonAction() {
-        print("down")
-    }
 
-    @objc func doneButtonAction() {
-        print("done")
-    }
-}*/
