@@ -27,7 +27,6 @@
 		AF177F3E1F7C37CE00CE7899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF177F411F7C37CE00CE7899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF177F431F7C37CE00CE7899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFCC630E1F868EB600CFA959 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
 		EC74C44B7A240DE9745FC099 /* Pods_Simple_Fuel_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Fuel_Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -58,7 +57,6 @@
 				AF177F351F7C37CE00CE7899 /* Products */,
 				D5FAAEFA91957DDD434928E4 /* Pods */,
 				1F109B38B8534319BF04E337 /* Frameworks */,
-				AFCC630D1F868E7E00CFA959 /* Images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +79,6 @@
 				AF177F431F7C37CE00CE7899 /* Info.plist */,
 			);
 			path = "Simple Fuel Logger";
-			sourceTree = "<group>";
-		};
-		AFCC630D1F868E7E00CFA959 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				AFCC630E1F868EB600CFA959 /* graph.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		D5FAAEFA91957DDD434928E4 /* Pods */ = {

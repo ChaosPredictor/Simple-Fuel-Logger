@@ -15,10 +15,6 @@ class ViewController: UIViewController, NavigationFieldDelegate {
     @IBOutlet weak var distnceField: UITextField!
     @IBOutlet weak var priceField: UITextField!
     
-    @IBAction func button(_ sender: UIButton) {
-        moveToNextResponder()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -35,14 +35,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF5-AI-duY">
-                                <rect key="frame" x="151" y="411" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8yo-Us-3Dg"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BYz-Ma-c1v">
                                 <rect key="frame" x="32" y="204" width="310" height="30"/>
                                 <constraints>
@@ -60,8 +52,8 @@
                                 <items>
                                     <barButtonItem systemItem="trash" id="Aie-yD-5EG"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5Mh-Cc-o7Y"/>
-                                    <barButtonItem image="graph.png" style="done" id="xGT-eB-D6z">
-                                        <color key="tintColor" red="0.035045482820000001" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <barButtonItem image="graph2" style="done" id="xGT-eB-D6z">
+                                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -84,7 +76,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add new" id="7tn-RG-9uv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="mjv-Ji-4yi"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mjv-Ji-4yi"/>
                     </navigationItem>
                     <connections>
                         <outlet property="distnceField" destination="ilQ-Bh-m7b" id="NCb-1Y-J53"/>
@@ -117,6 +109,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="graph.png" width="20" height="20"/>
+        <image name="graph2" width="30" height="30"/>
     </resources>
 </document>
