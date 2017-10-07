@@ -10,6 +10,13 @@ import UIKit
 
 class RefuelTableViewCell: UITableViewCell {
 
+    //MARK: Properties
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var tankImageView: UIImageView!
+    @IBOutlet weak var efficiencyMeter: UIProgressView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
