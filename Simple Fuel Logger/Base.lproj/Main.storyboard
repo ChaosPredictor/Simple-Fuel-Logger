@@ -94,7 +94,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="distnceField" destination="ilQ-Bh-m7b" id="NCb-1Y-J53"/>
+                        <outlet property="distanceField" destination="ilQ-Bh-m7b" id="eGY-ce-U3Z"/>
                         <outlet property="fuelField" destination="4fy-up-Qa5" id="dI5-LM-cb5"/>
                         <outlet property="priceField" destination="BYz-Ma-c1v" id="RPp-Ub-wST"/>
                         <outletCollection property="fuelField" destination="4fy-up-Qa5" collectionClass="NSMutableArray" id="xbH-kL-0cp"/>

@@ -17,14 +17,76 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RefuelTableViewCell", for: indexPath) as! RefuelTableViewCell
+
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let refuel = Refuel(context: context) // Link Task & Context
+        do {
+            let refuels = try context.fetch(Refuel.fetchRequest())
+            //let refuel = refuels[indexPath.row]
+            
+                            //(refuels[3] as AnyObject).volume
+            
+            //if let refuel = (refuels[indexPath.row] as AnyObject?) {
+            //    cell.distanceLabel?.text = refuel.volume
+            //}
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            do {
+                print("in do")
+                let refuels = try context.fetch(Refuel.fetchRequest())
+                // if let volume = (refuels[1] as AnyObject).volume {
+                //     print(volume)
+                // }
+
+                if var refuel2 = (refuels[indexPath.row] as? Refuel) {
+                    if var volume = refuel2.volume as? Double {
+                        cell.distanceLabel?.text = String(volume)
+                    }
+                    //print(volume)
+                }
+
+                
+                /*
+                if let volume = (refuels[indexPath.row] as! Refuel).volume {
+                    //print(volume)
+                    cell.distanceLabel?.text = volume
+                }
+                if let distance = (refuels[indexPath.row] as! Refuel).distance {
+                    print(distance)
+                }
+                if let price = (refuels[indexPath.row] as! Refuel).price {
+                    print(price)
+                }*/
+            } catch {
+                print("Fetching Failed")
+            }
+            
+            //if let volume = (refuels[indexPath.row] as! Refuel).volume {
+            //    cell.distanceLabel?.text = volume
+            //}
+            
+            //if let volume = (refuel as? AnyObject).volume {
+            //    cell.textLabel?.text = volume
+            //}
+            return cell
+        } catch {
+            print("Fetching Failed")
+        }
+        
+
+        
         //let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "RefuelTableViewCell")
-        let cellIdentifier = "RefuelTableViewCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         //cell.textLabel?.text = String("ar[indexPath.row]")
+
+/*        let cellIdentifier = "RefuelTableViewCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)*/
         return cell
     }
     
