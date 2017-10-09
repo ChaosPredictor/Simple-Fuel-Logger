@@ -87,7 +87,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add new" id="7tn-RG-9uv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mjv-Ji-4yi"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mjv-Ji-4yi">
+                            <connections>
+                                <action selector="saveRefuel:" destination="BYZ-38-t0r" id="f4q-cS-Ifk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="distnceField" destination="ilQ-Bh-m7b" id="NCb-1Y-J53"/>
@@ -117,7 +121,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tz1-pd-wU7" id="eiB-Jx-wmF">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petrol_tank" translatesAutoresizingMaskIntoConstraints="NO" id="Jwo-VG-uTh">

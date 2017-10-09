@@ -14,6 +14,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
+    @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }

@@ -15,6 +15,41 @@ class ViewController: UIViewController, NavigationFieldDelegate {
     @IBOutlet weak var distnceField: UITextField!
     @IBOutlet weak var priceField: UITextField!
     
+    
+    @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
+        print("saverefuel")
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let refuel = Refuel(context: context)
+        refuel.volume = Double(fuelField.text!) ?? 0
+        
+        // Save the data to coredata
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        let _ = navigationController?.popViewController(animated: true)
+        
+        do {
+            try context.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+
+    }
+    
+    func getData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        do {
+            print("in do")
+            let refuels = try context.fetch(Refuel.fetchRequest())
+            if let volume = (refuels[0] as AnyObject).volume {
+                print(volume)
+            }
+        } catch {
+            print("Fetching Failed")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,8 +57,10 @@ class ViewController: UIViewController, NavigationFieldDelegate {
         fuelField.nextNavigationField = distnceField
         distnceField.nextNavigationField = priceField
         
+        getData()
+        
     }
-
+/*
     func moveToNextResponder() {
         if fuelField.isFirstResponder {
             distnceField.becomeFirstResponder()
@@ -35,7 +72,7 @@ class ViewController: UIViewController, NavigationFieldDelegate {
             }
         }
     }
-    
+  */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
