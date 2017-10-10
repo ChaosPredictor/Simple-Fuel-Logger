@@ -29,7 +29,6 @@ class ViewController: UIViewController, NavigationFieldDelegate {
     
     @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
         
-        
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let refuel = Refuel(context: context)
         refuel.volume = Double(fuelField.text!) ?? 0
@@ -50,54 +49,22 @@ class ViewController: UIViewController, NavigationFieldDelegate {
 
     }
     
-    func getData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-        do {
-            print("in do")
-            let refuels = try context.fetch(Refuel.fetchRequest())
-           // if let volume = (refuels[1] as AnyObject).volume {
-           //     print(volume)
-           // }
-            if let volume = (refuels[3] as AnyObject).volume {
-                print(volume)
-            }
-            if let distance = (refuels[3] as AnyObject).distance {
-                print(distance)
-            }
-            if let price = (refuels[3] as AnyObject).price {
-                print(price)
-            }
-        } catch {
-            print("Fetching Failed")
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         fuelField.becomeFirstResponder()
         fuelField.nextNavigationField = distanceField
         distanceField.nextNavigationField = priceField
+        
+        fuelField.placeholder = "Volume"
+        distanceField.placeholder = "Distance"
+        priceField.placeholder = "Price"
+
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.isHidden = true
-        
-        getData()
-        
+
     }
-/*
-    func moveToNextResponder() {
-        if fuelField.isFirstResponder {
-            distnceField.becomeFirstResponder()
-        } else {
-            if distnceField.isFirstResponder {
-                priceField.becomeFirstResponder()
-            } else {
-                fuelField.becomeFirstResponder()
-            }
-        }
-    }
-  */
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
