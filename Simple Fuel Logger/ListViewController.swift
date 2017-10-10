@@ -38,13 +38,15 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
  
                 if let refuel = (refuels[indexPath.row] as? Refuel) {
                     if let volume = refuel.volume as? Double {
-                        cell.volumeLabel?.text = String(volume)
+                        cell.volumeLabel?.text = "\(volume)ℓ"
                     }
                     if let distance = refuel.distance as? Double {
-                        cell.distanceLabel?.text = String(distance)
+                        cell.distanceLabel?.text = "\(distance)km"
                     }
-                    if let price = refuel.price as? Double {
-                        cell.dateLabel?.text = String(price)
+                    if let date = refuel.date as? Date {
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "YYYY/MM/dd"
+                        cell.dateLabel?.text = dateFormatter.string(from: date)
                     }
 
                     //print(volume)

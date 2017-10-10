@@ -16,6 +16,7 @@ class ViewController: UIViewController, NavigationFieldDelegate {
     @IBOutlet weak var priceField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var todayLabel: UILabel!
+    @IBOutlet weak var today: CheckBox!
     
     @IBAction func todayCheckBox(_ sender: CheckBox) {
         if sender.isChecked {
@@ -34,6 +35,12 @@ class ViewController: UIViewController, NavigationFieldDelegate {
         refuel.volume = Double(fuelField.text!) ?? 0
         refuel.distance = Double(distanceField.text!) ?? 0
         refuel.price = Double(priceField.text!) ?? 0
+        
+        if today.isChecked {
+            refuel.date = Date()
+        } else {
+            refuel.date = datePicker.date
+        }
         
         // Save the data to coredata
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
