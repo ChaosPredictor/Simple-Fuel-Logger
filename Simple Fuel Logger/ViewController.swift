@@ -14,7 +14,18 @@ class ViewController: UIViewController, NavigationFieldDelegate {
     @IBOutlet weak var fuelField: UITextField!
     @IBOutlet weak var distanceField: UITextField!
     @IBOutlet weak var priceField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var todayLabel: UILabel!
     
+    @IBAction func todayCheckBox(_ sender: CheckBox) {
+        if sender.isChecked {
+            datePicker.isHidden = false
+            todayLabel.isHidden = true
+        } else {
+            datePicker.isHidden = true
+            todayLabel.isHidden = false
+        }
+    }
     
     @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
         
@@ -68,6 +79,8 @@ class ViewController: UIViewController, NavigationFieldDelegate {
         fuelField.becomeFirstResponder()
         fuelField.nextNavigationField = distanceField
         distanceField.nextNavigationField = priceField
+        datePicker.datePickerMode = UIDatePickerMode.date
+        datePicker.isHidden = true
         
         getData()
         
