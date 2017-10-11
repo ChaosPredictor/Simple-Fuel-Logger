@@ -224,6 +224,7 @@
                         <outlet property="datePicker" destination="DkQ-Tp-2MW" id="mGP-5E-LEl"/>
                         <outlet property="distanceField" destination="ilQ-Bh-m7b" id="eGY-ce-U3Z"/>
                         <outlet property="fuelField" destination="4fy-up-Qa5" id="dI5-LM-cb5"/>
+                        <outlet property="fullTank" destination="Dh4-lW-QRV" id="Iqf-5S-Kzm"/>
                         <outlet property="priceField" destination="BYz-Ma-c1v" id="RPp-Ub-wST"/>
                         <outlet property="today" destination="6og-s3-vFQ" id="q3t-8P-cs7"/>
                         <outlet property="todayLabel" destination="32l-yl-bZj" id="l3r-Uc-zTx"/>

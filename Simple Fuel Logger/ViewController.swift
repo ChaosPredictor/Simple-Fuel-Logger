@@ -17,6 +17,7 @@ class ViewController: UIViewController, NavigationFieldDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var today: CheckBox!
+    @IBOutlet weak var fullTank: CheckBox!
     
     @IBAction func todayCheckBox(_ sender: CheckBox) {
         if sender.isChecked {
@@ -35,6 +36,7 @@ class ViewController: UIViewController, NavigationFieldDelegate {
         refuel.volume = Double(fuelField.text!) ?? 0
         refuel.distance = Double(distanceField.text!) ?? 0
         refuel.price = Double(priceField.text!) ?? 0
+        refuel.full = fullTank.isChecked
         
         if today.isChecked {
             refuel.date = Date()
