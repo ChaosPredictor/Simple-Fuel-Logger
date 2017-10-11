@@ -255,7 +255,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petrol_tank" translatesAutoresizingMaskIntoConstraints="NO" id="Jwo-VG-uTh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fulltank_step2" translatesAutoresizingMaskIntoConstraints="NO" id="Jwo-VG-uTh">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -323,6 +323,7 @@
                                             <outlet property="dateLabel" destination="lF9-KV-fhI" id="0N4-r6-W0y"/>
                                             <outlet property="distanceLabel" destination="y50-13-vxZ" id="YFO-ri-A5z"/>
                                             <outlet property="efficiencyMeter" destination="0Gj-Vb-mLa" id="2ai-T8-3qr"/>
+                                            <outlet property="tankImage" destination="Jwo-VG-uTh" id="JsL-hb-Kbe"/>
                                             <outlet property="tankImageView" destination="Jwo-VG-uTh" id="D6e-d7-k0Q"/>
                                             <outlet property="volumeLabel" destination="uj3-2W-vXi" id="bLL-fk-w02"/>
                                         </connections>
@@ -369,8 +370,8 @@
     </scenes>
     <resources>
         <image name="checked" width="25" height="25"/>
+        <image name="fulltank_step2" width="501" height="501"/>
         <image name="graph2" width="30" height="30"/>
         <image name="list7" width="25" height="25"/>
-        <image name="petrol_tank" width="43" height="34"/>
     </resources>
 </document>

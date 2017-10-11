@@ -46,6 +46,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         cell.dateLabel?.text = dateFormatter.string(from: date)
                     }
 
+                    if refuel.full {
+                        cell.tankImageView.image = UIImage(imageLiteralResourceName: "fulltank_step2")
+                    } else {
+                        cell.tankImageView.image = UIImage(imageLiteralResourceName: "emptytank_step1")
+                    }
                 }
 
             } catch {

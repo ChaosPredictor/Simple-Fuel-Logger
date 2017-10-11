@@ -16,6 +16,7 @@ class RefuelTableViewCell: UITableViewCell {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var tankImageView: UIImageView!
     @IBOutlet weak var efficiencyMeter: UIProgressView!
+    @IBOutlet weak var tankImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
