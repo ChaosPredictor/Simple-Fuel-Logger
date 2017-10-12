@@ -60,7 +60,24 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            var refuels = try context.fetch(Refuel.fetchRequest())
 
+            if editingStyle == UITableViewCellEditingStyle.delete {
+                refuels.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }
+            
+        } catch {
+            print("error 2")
+        }
+        
+
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("list view controller loaded")

@@ -264,7 +264,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="60g-Z6-XLt">
-                                                    <rect key="frame" x="100" y="0.0" width="304" height="36"/>
+                                                    <rect key="frame" x="100" y="10" width="304" height="36"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-05-25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF9-KV-fhI">
                                                             <rect key="frame" x="0.0" y="0.0" width="110" height="36"/>
@@ -312,10 +312,9 @@
                                                 <constraint firstItem="Jwo-VG-uTh" firstAttribute="leading" secondItem="eiB-Jx-wmF" secondAttribute="leading" id="Gtl-QY-ZCE"/>
                                                 <constraint firstItem="60g-Z6-XLt" firstAttribute="leading" secondItem="Jwo-VG-uTh" secondAttribute="trailing" constant="10" id="K2e-in-le0"/>
                                                 <constraint firstAttribute="bottom" secondItem="Jwo-VG-uTh" secondAttribute="bottom" id="ULT-Dn-Tb7"/>
-                                                <constraint firstItem="60g-Z6-XLt" firstAttribute="top" secondItem="eiB-Jx-wmF" secondAttribute="top" id="Z7J-t7-gck"/>
                                                 <constraint firstAttribute="trailing" secondItem="60g-Z6-XLt" secondAttribute="trailing" constant="10" id="bpK-Bo-eyS"/>
                                                 <constraint firstItem="Jwo-VG-uTh" firstAttribute="top" secondItem="eiB-Jx-wmF" secondAttribute="top" id="wSZ-iX-eFg"/>
-                                                <constraint firstItem="60g-Z6-XLt" firstAttribute="top" secondItem="eiB-Jx-wmF" secondAttribute="top" id="yMc-Aw-0Yk"/>
+                                                <constraint firstItem="60g-Z6-XLt" firstAttribute="top" secondItem="eiB-Jx-wmF" secondAttribute="top" constant="10" id="xcp-my-tg4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
