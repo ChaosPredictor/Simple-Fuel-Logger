@@ -94,7 +94,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         print("list view controller loaded")
 
-        // Do any additional setup after loading the view.
     }
     
     
