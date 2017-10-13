@@ -14,8 +14,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
-    }
+    //@IBAction func saveRefuel(_ sender: UIBarButtonItem) {
+    //}
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -61,64 +61,33 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         if editingStyle == .delete {
-            print("Deleted")
             do {
-                print("try1")
                 var refuels = try context.fetch(Refuel.fetchRequest())
-                print("try2")
-                
-                print("index path: \(indexPath.row)")
-                print("leng1: \(refuels.count)")
                 context.delete(refuels[indexPath.row] as! Refuel)
-                refuels.remove(at: indexPath.row)
-                print("leng2: \(refuels.count)")
-                print("try3")
                 do {
                     try context.save()
-                    print("refuel saved")
+                    print("Remove - refuel saved")
                 } catch {
                     let nserror = error as NSError
+                    print("Remove - refuel not saved")
                     fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 }
-                print("not try1")
+                print("Remove - refuel done")
 
             } catch {
-                print("no refuels")
+                print("Remove - refuel not done")
             }
-
-            
-            //tableView.deleteRows(at: [indexPath], with: .automatic)
-            print("not try2")
             tableView.reloadData()
-            print("not try3")
-
         }
     }
-    /*
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        do {
-            var refuels = try context.fetch(Refuel.fetchRequest())
-
-            if editingStyle == UITableViewCellEditingStyle.delete {
-                refuels.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-            }
-            
-        } catch {
-            print("error 2")
-        }
-        
-
-    }*/
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         print("list view controller loaded")
 
         // Do any additional setup after loading the view.
