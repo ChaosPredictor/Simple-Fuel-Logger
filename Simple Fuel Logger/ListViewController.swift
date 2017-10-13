@@ -34,35 +34,32 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-            do {
-                //let refuels = try context.fetch(Refuel.fetchRequest())
+        let fetch:NSFetchRequest = Refuel.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetch.sortDescriptors = [sortDescriptor]
+        
+        do {
+            let refuels = try context.fetch(fetch)
+            
+            let refuel = refuels[indexPath.row]
+            cell.volumeLabel?.text = "\(refuel.volume)ℓ"
+            cell.distanceLabel?.text = "\(refuel.distance)km"
 
-                let fec:NSFetchRequest = Refuel.fetchRequest()
-                let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
-                fec.sortDescriptors = [sortDescriptor]
-                let refuels = try! context.fetch(fec)
-                
-                
-                if let refuel = (refuels[indexPath.row] as? Refuel) {
-                    cell.volumeLabel?.text = "\(refuel.volume)ℓ"
-                    cell.distanceLabel?.text = "\(refuel.distance)km"
-
-                    if let date = refuel.date {
-                        let dateFormatter = DateFormatter()
-                        dateFormatter.dateFormat = "YYYY/MM/dd"
-                        cell.dateLabel?.text = dateFormatter.string(from: date)
-                    }
-
-                    if refuel.full {
-                        cell.tankImageView.image = UIImage(imageLiteralResourceName: "fulltank_step2")
-                    } else {
-                        cell.tankImageView.image = UIImage(imageLiteralResourceName: "emptytank_step1")
-                    }
-                }
-
-            } catch {
-                print("Fetching Failed")
+            if let date = refuel.date {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "YYYY/MM/dd"
+                cell.dateLabel?.text = dateFormatter.string(from: date)
             }
+
+            if refuel.full {
+                cell.tankImageView.image = UIImage(imageLiteralResourceName: "fulltank_step2")
+            } else {
+                cell.tankImageView.image = UIImage(imageLiteralResourceName: "emptytank_step1")
+            }
+
+        } catch {
+            print("Fetching Failed")
+        }
         
         return cell
     }
