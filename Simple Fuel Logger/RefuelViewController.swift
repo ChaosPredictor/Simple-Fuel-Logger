@@ -9,7 +9,7 @@
 import UIKit
 import UITextField_Navigation
 
-class ViewController: UIViewController, NavigationFieldDelegate {
+class RefuelViewController: UIViewController, NavigationFieldDelegate {
 
     @IBOutlet weak var fuelField: UITextField!
     @IBOutlet weak var distanceField: UITextField!
@@ -18,6 +18,8 @@ class ViewController: UIViewController, NavigationFieldDelegate {
     @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var today: CheckBox!
     @IBOutlet weak var fullTank: CheckBox!
+    
+    var refuel: Refuel?
     
     @IBAction func todayCheckBox(_ sender: CheckBox) {
         if sender.isChecked {
@@ -30,18 +32,18 @@ class ViewController: UIViewController, NavigationFieldDelegate {
     }
     
     @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
-        
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let refuel = Refuel(context: context)
-        refuel.volume = Double(fuelField.text!) ?? 0
-        refuel.distance = Double(distanceField.text!) ?? 0
-        refuel.price = Double(priceField.text!) ?? 0
-        refuel.full = fullTank.isChecked
+        refuel = Refuel(context: context)
+        
+        refuel?.volume = Double(fuelField.text!) ?? 0
+        refuel?.distance = Double(distanceField.text!) ?? 0
+        refuel?.price = Double(priceField.text!) ?? 0
+        refuel?.full = fullTank.isChecked
         
         if today.isChecked {
-            refuel.date = Date()
+            refuel?.date = Date()
         } else {
-            refuel.date = datePicker.date
+            refuel?.date = datePicker.date
         }
         
         // Save the data to coredata
@@ -59,30 +61,54 @@ class ViewController: UIViewController, NavigationFieldDelegate {
     }
     
     override func viewDidLoad() {
+        print("Loaded")
         super.viewDidLoad()
 
         fuelField.becomeFirstResponder()
         fuelField.nextNavigationField = distanceField
         distanceField.nextNavigationField = priceField
         
-        fuelField.placeholder = "Volume"
-        distanceField.placeholder = "Distance"
-        priceField.placeholder = "Price"
 
-        datePicker.datePickerMode = UIDatePickerMode.date
-        datePicker.isHidden = true
+        
+        if refuel != nil {
+            fuelField.text = String(describing: refuel!.volume)
+            distanceField.text = String(describing: refuel!.distance)
+            priceField.text = String(describing: refuel!.price)
+            datePicker.date = (refuel?.date)!
+            todayLabel.isHidden = true
+            today.isChecked = false
+            fullTank.isChecked = (refuel?.full)!
+        } else {
+            fuelField.placeholder = "Volume"
+            distanceField.placeholder = "Distance"
+            priceField.placeholder = "Price"
+            datePicker.datePickerMode = UIDatePickerMode.date
+            datePicker.isHidden = true
+        }
+
+
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Appear")
+        print("Refuel is \(String(describing: refuel))")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        //refuel = Refuel()
+        
     }
 
 

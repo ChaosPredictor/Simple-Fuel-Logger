@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF177F381F7C37CE00CE7899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF177F371F7C37CE00CE7899 /* AppDelegate.swift */; };
-		AF177F3A1F7C37CE00CE7899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF177F391F7C37CE00CE7899 /* ViewController.swift */; };
+		AF177F3A1F7C37CE00CE7899 /* RefuelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF177F391F7C37CE00CE7899 /* RefuelViewController.swift */; };
 		AF177F3D1F7C37CE00CE7899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF177F3B1F7C37CE00CE7899 /* Main.storyboard */; };
 		AF177F3F1F7C37CE00CE7899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF177F3E1F7C37CE00CE7899 /* Assets.xcassets */; };
 		AF177F421F7C37CE00CE7899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF177F401F7C37CE00CE7899 /* LaunchScreen.storyboard */; };
@@ -26,7 +26,7 @@
 		A68B8CC7A9556E85D3F56E0A /* Pods-Simple Fuel Logger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Fuel Logger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger.debug.xcconfig"; sourceTree = "<group>"; };
 		AF177F341F7C37CE00CE7899 /* Simple Fuel Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Fuel Logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF177F371F7C37CE00CE7899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF177F391F7C37CE00CE7899 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF177F391F7C37CE00CE7899 /* RefuelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuelViewController.swift; sourceTree = "<group>"; };
 		AF177F3C1F7C37CE00CE7899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF177F3E1F7C37CE00CE7899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF177F411F7C37CE00CE7899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				AF177F371F7C37CE00CE7899 /* AppDelegate.swift */,
 				AF2E1ED21F8AC4FF005C9116 /* SimpleFuelLogger.xcdatamodeld */,
-				AF177F391F7C37CE00CE7899 /* ViewController.swift */,
+				AF177F391F7C37CE00CE7899 /* RefuelViewController.swift */,
 				AF177F3B1F7C37CE00CE7899 /* Main.storyboard */,
 				AFC34A821F8808E100DE9B16 /* ListViewController.swift */,
 				AFC34A801F879DD600DE9B16 /* RefuelTableViewCell.swift */,
@@ -233,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF177F3A1F7C37CE00CE7899 /* ViewController.swift in Sources */,
+				AF177F3A1F7C37CE00CE7899 /* RefuelViewController.swift in Sources */,
 				AF177F381F7C37CE00CE7899 /* AppDelegate.swift in Sources */,
 				AF2E1ED71F8CB527005C9116 /* CheckBox.swift in Sources */,
 				AFC34A831F8808E100DE9B16 /* ListViewController.swift in Sources */,

@@ -8,8 +8,12 @@
 
 import UIKit
 import CoreData
+import os.log
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -104,14 +108,46 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            let refuels = try context.fetch(Refuel.fetchRequest())
+        
+        
+        super.prepare(for: segue, sender: sender)
+        switch(segue.identifier ?? "") {
+            case "AddItem":
+                os_log("Adding a new meal.", log: .default, type: .debug)
+            case "EditRefuel":
+                guard let refuelDetailViewController = segue.destination as? RefuelViewController else {
+                    fatalError("Unexpected destination: \(segue.destination)")
+                }
+            
+                guard let selectedRefuelCell = sender as? RefuelTableViewCell else {
+                    fatalError("Unexpected sender: \(String(describing: sender))")
+                }
+            
+                guard let indexPath = tableView.indexPath(for: selectedRefuelCell) else {
+                    fatalError("The selected cell is not being displayed by the table")
+                }
+            
+                let selectedRefuel = refuels[indexPath.row]
+                print("Sending index:\(indexPath.row) \(String(describing: selectedRefuel))")
+                refuelDetailViewController.refuel = selectedRefuel as? Refuel
+            
+            default:
+                print("default")
+        }
+        } catch {
+            print("error")
+        }
     }
-    */
+    
 
 }

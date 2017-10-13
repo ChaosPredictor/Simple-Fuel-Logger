@@ -13,7 +13,7 @@
         <!--Add Refuel-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_Fuel_Logger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RefuelViewController" customModule="Simple_Fuel_Logger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fzw-Bn-2o3">
-                                <rect key="frame" x="20" y="84" width="374" height="608"/>
+                                <rect key="frame" x="20" y="40" width="374" height="652"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rdc-y6-2As">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -195,7 +195,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjL-vN-zAT">
-                                        <rect key="frame" x="0.0" y="250" width="374" height="358"/>
+                                        <rect key="frame" x="0.0" y="250" width="374" height="402"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -244,7 +244,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1b7-1S-dPv">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -252,7 +252,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tz1-pd-wU7" id="eiB-Jx-wmF">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fulltank_step2" translatesAutoresizingMaskIntoConstraints="NO" id="Jwo-VG-uTh">
@@ -325,6 +325,7 @@
                                             <outlet property="tankImage" destination="Jwo-VG-uTh" id="JsL-hb-Kbe"/>
                                             <outlet property="tankImageView" destination="Jwo-VG-uTh" id="D6e-d7-k0Q"/>
                                             <outlet property="volumeLabel" destination="uj3-2W-vXi" id="bLL-fk-w02"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="EditRefuel" id="qDR-6I-Yc0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -343,10 +344,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fxn-pC-FPV"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="1b7-1S-dPv" id="vEq-5c-BZD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFg-Hx-hvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="-82"/>
+            <point key="canvasLocation" x="1477" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lIw-UL-fKh">
@@ -364,7 +368,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVK-Tq-6Ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-232" y="132"/>
+            <point key="canvasLocation" x="-425" y="130"/>
         </scene>
     </scenes>
     <resources>
@@ -373,4 +377,7 @@
         <image name="graph2" width="30" height="30"/>
         <image name="list7" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qDR-6I-Yc0"/>
+    </inferredMetricsTieBreakers>
 </document>
