@@ -78,6 +78,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
             todayLabel.isHidden = true
             today.isChecked = false
             fullTank.isChecked = (refuel?.full)!
+            self.title = "Edit Refuel"
         } else {
             fuelField.placeholder = "Volume"
             distanceField.placeholder = "Distance"
