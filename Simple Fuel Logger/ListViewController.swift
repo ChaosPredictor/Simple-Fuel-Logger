@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -32,10 +33,16 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "RefuelTableViewCell", for: indexPath) as! RefuelTableViewCell
 
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            
+        
             do {
-                let refuels = try context.fetch(Refuel.fetchRequest())
- 
+                //let refuels = try context.fetch(Refuel.fetchRequest())
+
+                let fec:NSFetchRequest = Refuel.fetchRequest()
+                let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+                fec.sortDescriptors = [sortDescriptor]
+                let refuels = try! context.fetch(fec)
+                
+                
                 if let refuel = (refuels[indexPath.row] as? Refuel) {
                     cell.volumeLabel?.text = "\(refuel.volume)ℓ"
                     cell.distanceLabel?.text = "\(refuel.distance)km"
@@ -87,12 +94,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         print("list view controller loaded")
 
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
