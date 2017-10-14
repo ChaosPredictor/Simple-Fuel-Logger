@@ -20,6 +20,8 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     @IBOutlet weak var fullTank: CheckBox!
     
     var refuel: Refuel?
+    var index = -1
+    var editMode = false
     
     @IBAction func todayCheckBox(_ sender: CheckBox) {
         if sender.isChecked {
@@ -32,31 +34,37 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     }
     
     @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        refuel = Refuel(context: context)
-        
-        refuel?.volume = Double(fuelField.text!) ?? 0
-        refuel?.distance = Double(distanceField.text!) ?? 0
-        refuel?.price = Double(priceField.text!) ?? 0
-        refuel?.full = fullTank.isChecked
-        
-        if today.isChecked {
-            refuel?.date = Date()
+        if editMode {
+            print("edit mode save")
         } else {
-            refuel?.date = datePicker.date
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            refuel = Refuel(context: context)
+            
+            refuel?.volume = Double(fuelField.text!) ?? 0
+            refuel?.distance = Double(distanceField.text!) ?? 0
+            refuel?.price = Double(priceField.text!) ?? 0
+            refuel?.full = fullTank.isChecked
+            
+            if today.isChecked {
+                refuel?.date = Date()
+            } else {
+                refuel?.date = datePicker.date
+            }
+            
+            // Save the data to coredata
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            let _ = navigationController?.popViewController(animated: true)
+            
+            do {
+                try context.save()
+                print("refuel saved")
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+    
         }
-        
-        // Save the data to coredata
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        let _ = navigationController?.popViewController(animated: true)
-        
-        do {
-            try context.save()
-            print("refuel saved")
-        } catch {
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
+
 
     }
     
@@ -70,21 +78,30 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         
 
         
-        if refuel != nil {
-            fuelField.text = String(describing: refuel!.volume)
-            distanceField.text = String(describing: refuel!.distance)
-            priceField.text = String(describing: refuel!.price)
-            datePicker.date = (refuel?.date)!
+        if index != -1 {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            do {
+                let refuel = try context.fetch(Refuel.fetchRequest())[index] as Refuel
+                fuelField.text = String(describing: refuel.volume)
+                distanceField.text = String(describing: refuel.distance)
+                priceField.text = String(describing: refuel.price)
+                datePicker.date = (refuel.date)!
+                fullTank.isChecked = refuel.full
+            } catch {
+                
+            }
+            
             todayLabel.isHidden = true
             today.isChecked = false
-            fullTank.isChecked = (refuel?.full)!
             self.title = "Edit Refuel"
+            editMode = true
         } else {
             fuelField.placeholder = "Volume"
             distanceField.placeholder = "Distance"
             priceField.placeholder = "Price"
             datePicker.datePickerMode = UIDatePickerMode.date
             datePicker.isHidden = true
+            editMode = false
         }
 
 

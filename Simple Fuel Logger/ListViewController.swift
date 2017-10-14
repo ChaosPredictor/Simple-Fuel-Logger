@@ -114,13 +114,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        do {
-            let refuels = try context.fetch(Refuel.fetchRequest())
-        
+        //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         super.prepare(for: segue, sender: sender)
+
+        //do {
+            //let refuels = try context.fetch(Refuel.fetchRequest())
+            
         switch(segue.identifier ?? "") {
             case "AddItem":
                 os_log("Adding a new meal.", log: .default, type: .debug)
@@ -137,16 +137,17 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     fatalError("The selected cell is not being displayed by the table")
                 }
             
-                let selectedRefuel = refuels[indexPath.row]
-                print("Sending index:\(indexPath.row) \(String(describing: selectedRefuel))")
-                refuelDetailViewController.refuel = selectedRefuel as? Refuel
+                //let selectedRefuel = refuels[indexPath.row]
+                //print("Sending index:\(indexPath.row) \(String(describing: selectedRefuel))")
+                //refuelDetailViewController.refuel = selectedRefuel as? Refuel
+                refuelDetailViewController.index = indexPath.row
             
             default:
                 print("default")
         }
-        } catch {
-            print("error")
-        }
+        //} catch {
+        //    print("error")
+        //}
     }
     
 
