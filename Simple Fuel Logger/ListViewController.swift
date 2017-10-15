@@ -44,18 +44,19 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         do {
             let refuels = try context.fetch(fetch)
+            //let refuels = try context.fetch(Refuel.fetchRequest())
             
             let refuel = refuels[indexPath.row]
-            cell.volumeLabel?.text = "\(refuel.volume)ℓ"
-            cell.distanceLabel?.text = "\(refuel.distance)km"
+            cell.volumeLabel?.text = "\((refuel as! Refuel).volume)ℓ"
+            cell.distanceLabel?.text = "\((refuel as! Refuel).distance)km"
 
-            if let date = refuel.date {
+            if let date = (refuel as! Refuel).date {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "YYYY/MM/dd"
                 cell.dateLabel?.text = dateFormatter.string(from: date)
             }
 
-            if refuel.full {
+            if (refuel as! Refuel).full {
                 cell.tankImageView.image = UIImage(imageLiteralResourceName: "fulltank_step2")
             } else {
                 cell.tankImageView.image = UIImage(imageLiteralResourceName: "emptytank_step1")
