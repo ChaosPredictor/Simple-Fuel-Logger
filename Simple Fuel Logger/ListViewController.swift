@@ -93,7 +93,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,7 +100,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -109,7 +110,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
 
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

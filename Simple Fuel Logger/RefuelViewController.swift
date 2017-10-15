@@ -58,6 +58,30 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
         if editMode {
             print("edit mode save")
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let fetch:NSFetchRequest = Refuel.fetchRequest()
+            let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+            fetch.sortDescriptors = [sortDescriptor]
+            
+            do {
+                var refuels = try context.fetch(fetch)
+                if let refuel = refuels[index] as Refuel?{
+                    readRefuelFromField(refuel: refuel)
+                    print("value: \(refuel.volume)")
+                    refuels[index] = refuel
+                }
+                do {
+                    try context.save()
+                    print("edited refuel saved")
+                } catch {
+                    let nserror = error as NSError
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
+            } catch {
+                
+            }
+            
         } else {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let refuel = Refuel(context: context)
@@ -79,8 +103,44 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
 
     }
     
+    func getRefuel(index: Int) -> Refuel? {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        let fetch:NSFetchRequest = Refuel.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetch.sortDescriptors = [sortDescriptor]
+        
+        do {
+            let refuels = try context.fetch(fetch)
+            //let refuel = try context.fetch(Refuel.fetchRequest())[index] as Refuel
+            let refuel = refuels[index]
+            return refuel
+            //writeRefuelToField(refuel: refuel)
+        } catch {
+            print("error in viewDidLoad")
+        }
+        return nil
+    }
+    
+    func initEditRefuel(refuel: Refuel) {
+        self.title = "Edit Refuel"
+        todayLabel.isHidden = true
+        today.isChecked = false
+        writeRefuelToField(refuel: refuel)
+    }
+    
+    func initAddRefuel() {
+        self.title = "Add Refuel"
+
+        datePicker.datePickerMode = UIDatePickerMode.date
+        datePicker.isHidden = true
+        
+        fuelField.placeholder = "Volume"
+        distanceField.placeholder = "Distance"
+        priceField.placeholder = "Price"
+    }
+    
     override func viewDidLoad() {
-        print("Loaded")
         super.viewDidLoad()
 
         fuelField.becomeFirstResponder()
@@ -88,35 +148,20 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         distanceField.nextNavigationField = priceField
         
         if index != -1 {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
- 
-            let fetch:NSFetchRequest = Refuel.fetchRequest()
-            let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
-            fetch.sortDescriptors = [sortDescriptor]
-                
-            do {
-                let refuels = try context.fetch(fetch)
-                //let refuel = try context.fetch(Refuel.fetchRequest())[index] as Refuel
-                let refuel = refuels[index]
-                writeRefuelToField(refuel: refuel)
-            } catch {
-                print("error in viewDidLoad")
-            }
             
-            todayLabel.isHidden = true
-            today.isChecked = false
-            self.title = "Edit Refuel"
             editMode = true
+
+            if let refuel = getRefuel(index: index) {
+                initEditRefuel(refuel: refuel)
+            }
+
         } else {
-            fuelField.placeholder = "Volume"
-            distanceField.placeholder = "Distance"
-            priceField.placeholder = "Price"
-            datePicker.datePickerMode = UIDatePickerMode.date
-            datePicker.isHidden = true
+            
             editMode = false
+            
+            initAddRefuel()
+            
         }
-
-
 
     }
 
