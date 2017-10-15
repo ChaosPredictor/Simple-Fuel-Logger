@@ -235,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="473.91304347826093" y="130.43478260869566"/>
         </scene>
-        <!--Graph-->
+        <!--Refuel list-->
         <scene sceneID="wgA-Wv-L3X">
             <objects>
-                <viewController title="Graph" id="esl-hy-yaq" customClass="ListViewController" customModule="Simple_Fuel_Logger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Refuel list" id="esl-hy-yaq" customClass="ListViewController" customModule="Simple_Fuel_Logger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K5r-VU-wQJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
