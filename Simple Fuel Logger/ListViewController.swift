@@ -49,12 +49,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
-            for index in 1...4 {
+            for index in 1...csvRows.count-2 {
                 let refuel = Refuel(context: context)
 
                 let dateTime = csvRows[index][0].characters.split{$0 == " "}.map(String.init)
                 let date: String = dateTime[0]
-                print("DATE: \(date)")
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd"
                 refuel.date = dateFormatter.date(from: date)
@@ -66,28 +65,17 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 do {
                     try context.save()
-                    print("edited refuel saved")
                 } catch {
                     let nserror = error as NSError
                     fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 }
             }
             
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            let _ = navigationController?.popViewController(animated: true)
-            
-            do {
-                try context.save()
-                print("refuel saved")
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-            
         } catch {
             fatalError("Can't load \(String(describing: path)) file")
         }
         
+        tableView.reloadData()
     }
     
     func deleteAllCoreData() {
