@@ -70,6 +70,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         fetch.sortDescriptors = [sortDescriptor]
         
         do {
+            //without ordering by date
+            //let refuels = try context.fetch(Refuel.fetchRequest())
             let refuels = try context.fetch(fetch)
             return refuels
         } catch {
@@ -83,77 +85,39 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    
-    
-    //@IBAction func saveRefuel(_ sender: UIBarButtonItem) {
-    //}
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        do {
-            let refuels = try context.fetch(Refuel.fetchRequest())
-            return refuels.count
-        } catch {
-            return 0
-        }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let refuels = getRefuelsFromCoreData()
+
+        return refuels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RefuelTableViewCell", for: indexPath) as! RefuelTableViewCell
 
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let fetch:NSFetchRequest = Refuel.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
-        fetch.sortDescriptors = [sortDescriptor]
-        
-        do {
-            let refuels = try context.fetch(fetch)
-            //let refuels = try context.fetch(Refuel.fetchRequest())
-            
+        let refuels = getRefuelsFromCoreData()
+        if refuels.count > 0 {
             let refuel = refuels[indexPath.row]
             cell.volumeLabel?.text = "\(refuel.volume)ℓ"
             cell.distanceLabel?.text = "\(refuel.distance)km"
-
-            if let date = refuel.date {
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "YYYY/MM/dd"
-                cell.dateLabel?.text = dateFormatter.string(from: date)
-            }
-
-            if refuel.full {
-                cell.tankImageView.image = UIImage(imageLiteralResourceName: "fulltank_step2")
-            } else {
-                cell.tankImageView.image = UIImage(imageLiteralResourceName: "emptytank_step1")
-            }
-
-        } catch {
-            print("Fetching Failed")
+            cell.dateLabel?.text = dateToString(date: refuel.date)
+            cell.tankImageView.image = fullOrEmptyTankImage(full: refuel.full)
         }
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         if editingStyle == .delete {
-            do {
-                var refuels = try context.fetch(Refuel.fetchRequest())
-                context.delete(refuels[indexPath.row] as! Refuel)
-                do {
-                    try context.save()
-                    print("Remove - refuel saved")
-                } catch {
-                    let nserror = error as NSError
-                    print("Remove - refuel not saved")
-                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-                }
-                print("Remove - refuel done")
+            var refuels = getRefuelsFromCoreData()
 
+            context.delete(refuels[indexPath.row] )
+            do {
+                try context.save()
             } catch {
-                print("Remove - refuel not done")
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
             tableView.reloadData()
         }
@@ -199,5 +163,26 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //    print("error")
         //}
     }
+
     
+    //MARK: - Show Cell Assist
+    func dateToString(date: Date?) -> String? {
+        if (date != nil){
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY/MM/dd"
+            return dateFormatter.string(from: date!)
+        }
+        return nil
+    }
+    
+    func fullOrEmptyTankImage(full: Bool) -> UIImage {
+        if full {
+            return UIImage(imageLiteralResourceName: "fulltank_step2")
+        } else {
+            return UIImage(imageLiteralResourceName: "emptytank_step1")
+        }
+    }
+
 }
+
+
