@@ -27,11 +27,6 @@
                                 <items>
                                     <barButtonItem systemItem="trash" id="Aie-yD-5EG"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5Mh-Cc-o7Y"/>
-                                    <barButtonItem systemItem="compose" id="jgV-i4-7Aw">
-                                        <connections>
-                                            <action selector="exportButton:" destination="BYZ-38-t0r" id="1LJ-qH-XlO"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="7u1-q1-IwI"/>
                                     <barButtonItem image="list7" style="plain" id="BSr-EM-Fy5">
                                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
@@ -340,12 +335,28 @@
                                     <outlet property="delegate" destination="esl-hy-yaq" id="it9-Yh-BPN"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9L0-CX-dwn">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gYk-qh-yDX"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="compose" id="jgV-i4-7Aw">
+                                        <connections>
+                                            <action selector="exportButton:" destination="esl-hy-yaq" id="C9e-Ef-kao"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1b7-1S-dPv" firstAttribute="leading" secondItem="fxn-pC-FPV" secondAttribute="leading" id="6cA-Lh-Aaq"/>
                             <constraint firstItem="1b7-1S-dPv" firstAttribute="trailing" secondItem="fxn-pC-FPV" secondAttribute="trailing" id="EC0-iq-kPv"/>
+                            <constraint firstItem="9L0-CX-dwn" firstAttribute="bottom" secondItem="fxn-pC-FPV" secondAttribute="bottom" id="GtP-ms-kgw"/>
                             <constraint firstItem="1b7-1S-dPv" firstAttribute="bottom" secondItem="fxn-pC-FPV" secondAttribute="bottom" id="Hwm-WE-Xpl"/>
+                            <constraint firstItem="9L0-CX-dwn" firstAttribute="leading" secondItem="fxn-pC-FPV" secondAttribute="leading" id="Nrq-Rg-oIK"/>
+                            <constraint firstItem="9L0-CX-dwn" firstAttribute="trailing" secondItem="fxn-pC-FPV" secondAttribute="trailing" id="Zax-3J-H5h"/>
                             <constraint firstItem="1b7-1S-dPv" firstAttribute="top" secondItem="fxn-pC-FPV" secondAttribute="top" id="fs1-s9-uTa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fxn-pC-FPV"/>
@@ -384,7 +395,6 @@
         <image name="list7" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KWd-A8-z9m"/>
         <segue reference="qDR-6I-Yc0"/>
     </inferredMetricsTieBreakers>
 </document>

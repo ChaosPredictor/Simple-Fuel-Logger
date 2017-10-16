@@ -20,25 +20,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     @IBOutlet weak var today: CheckBox!
     @IBOutlet weak var fullTank: CheckBox!
     
-    @IBAction func exportButton(_ sender: UIBarButtonItem) {
-        // Set the file path
-        //let path = "myfile.txt"
-        let documentsPath = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
-        let path = documentsPath.appendingPathComponent("myfile.txt")
-        
-        
-        // Set the contents
-        let contents = "Here are my file's contents"
-        
-        do {
-            // Write contents to file
-            try contents.write(to: path!, atomically: false, encoding: String.Encoding.utf8)
-            print("saed to \(String(describing: path))")
-        }
-        catch let error as NSError {
-            print("Ooops! Something went wrong: \(error)")
-        }
-    }
+
     
     var refuel: Refuel?
     var index = -1
