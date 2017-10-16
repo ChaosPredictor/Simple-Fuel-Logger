@@ -48,25 +48,31 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             deleteAllCoreData()
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let refuel = Refuel(context: context)
             
+            for index in 1...4 {
+                let refuel = Refuel(context: context)
 
+                let dateTime = csvRows[index][0].characters.split{$0 == " "}.map(String.init)
+                let date: String = dateTime[0]
+                print("DATE: \(date)")
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                refuel.date = dateFormatter.date(from: date)
+                
+                refuel.distance = Double(csvRows[index][1])!
+                refuel.volume = Double(csvRows[index][2])!
+                refuel.full = Bool(csvRows[index][3])!
+                refuel.price = Double(csvRows[index][4])!
+                
+                do {
+                    try context.save()
+                    print("edited refuel saved")
+                } catch {
+                    let nserror = error as NSError
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
+            }
             
-            //var fullName = "First Last"
-            let dateTime = csvRows[1][0].characters.split{$0 == " "}.map(String.init)
-            let date: String = dateTime[0]
-            print("DATE: \(date)")
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            refuel.date = dateFormatter.date(from: date)
-            
-            
-            refuel.distance = Double(csvRows[1][1])!
-            refuel.volume = Double(csvRows[1][2])!
-            refuel.full = Bool(csvRows[1][3])!
-            refuel.price = Double(csvRows[1][4])!
-
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             let _ = navigationController?.popViewController(animated: true)
             

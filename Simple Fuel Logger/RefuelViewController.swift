@@ -70,7 +70,6 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
                 var refuels = try context.fetch(fetch)
                 if let refuel = refuels[index] as Refuel?{
                     readRefuelFromField(refuel: refuel)
-                    print("value: \(refuel.volume)")
                     refuels[index] = refuel
                 }
                 do {
