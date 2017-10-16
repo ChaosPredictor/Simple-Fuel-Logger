@@ -34,6 +34,82 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         exportToFile()
     }
     
+    @IBAction func importButton(_ sender: UIBarButtonItem) {
+        importFromFile()
+    }
+    
+    func importFromFile() {
+        let documentsPath = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
+        let path = documentsPath.appendingPathComponent("myfile.txt")
+        var csvRows:[[String]]
+        do {
+            let string = try String(contentsOf: path!, encoding: String.Encoding.utf8)
+            csvRows = csv(data: string)
+            deleteAllCoreData()
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let refuel = Refuel(context: context)
+            
+
+            
+            //var fullName = "First Last"
+            let dateTime = csvRows[1][0].characters.split{$0 == " "}.map(String.init)
+            let date: String = dateTime[0]
+            print("DATE: \(date)")
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            refuel.date = dateFormatter.date(from: date)
+            
+            
+            refuel.distance = Double(csvRows[1][1])!
+            refuel.volume = Double(csvRows[1][2])!
+            refuel.full = Bool(csvRows[1][3])!
+            refuel.price = Double(csvRows[1][4])!
+
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            let _ = navigationController?.popViewController(animated: true)
+            
+            do {
+                try context.save()
+                print("refuel saved")
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+            
+        } catch {
+            fatalError("Can't load \(String(describing: path)) file")
+        }
+        
+    }
+    
+    func deleteAllCoreData() {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+        
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Refuel")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch {
+            print ("There was an error")
+        }
+    }
+    
+    
+    func csv(data: String) -> [[String]] {
+        var result: [[String]] = []
+        let rows = data.components(separatedBy: "\n")
+        for row in rows {
+            let columns = row.components(separatedBy: ",")
+            result.append(columns)
+        }
+        return result
+    }
+    
     func exportToFile() {
         let documentsPath = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
         let path = documentsPath.appendingPathComponent("myfile.txt")

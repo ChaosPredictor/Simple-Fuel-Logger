@@ -346,6 +346,11 @@
                                             <action selector="exportButton:" destination="esl-hy-yaq" id="C9e-Ef-kao"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem systemItem="organize" id="gqC-70-TTE">
+                                        <connections>
+                                            <action selector="importButton:" destination="esl-hy-yaq" id="qBd-Kt-Dgz"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
