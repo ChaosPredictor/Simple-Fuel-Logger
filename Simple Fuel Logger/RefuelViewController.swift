@@ -38,7 +38,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     
     func readRefuelFromField(refuel: Refuel) {
         refuel.volume = Double(fuelField.text!) ?? 0
-        refuel.distance = Double(distanceField.text!) ?? 0
+        refuel.distance = Double(distanceField.text!) ?? -1
         refuel.price = Double(priceField.text!) ?? 0
         refuel.full = fullTank.isChecked
         
