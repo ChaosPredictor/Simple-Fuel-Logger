@@ -18,32 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQl-DM-d3Y">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GRa-y6-NhS"/>
-                                    <constraint firstAttribute="height" constant="44" id="hGa-0E-0ry"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem systemItem="trash" id="Aie-yD-5EG"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5Mh-Cc-o7Y"/>
-                                    <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="7u1-q1-IwI"/>
-                                    <barButtonItem image="list7" style="plain" id="BSr-EM-Fy5">
-                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                                        <inset key="landscapeImageInsets" minX="20" minY="0.0" maxX="200" maxY="0.0"/>
-                                        <inset key="largeContentSizeImageInsets" minX="20" minY="14" maxX="20" maxY="0.0"/>
-                                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="esl-hy-yaq" kind="show" id="KWd-A8-z9m"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem image="graph2" style="done" id="xGT-eB-D6z">
-                                        <inset key="imageInsets" minX="0.0" minY="-4" maxX="0.0" maxY="0.0"/>
-                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
-                                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fzw-Bn-2o3">
                                 <rect key="frame" x="20" y="40" width="374" height="652"/>
                                 <subviews>
@@ -200,6 +174,32 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQl-DM-d3Y">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GRa-y6-NhS"/>
+                                    <constraint firstAttribute="height" constant="44" id="hGa-0E-0ry"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="Aie-yD-5EG"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5Mh-Cc-o7Y"/>
+                                    <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="7u1-q1-IwI"/>
+                                    <barButtonItem image="list7" style="plain" id="BSr-EM-Fy5">
+                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <inset key="landscapeImageInsets" minX="20" minY="0.0" maxX="200" maxY="0.0"/>
+                                        <inset key="largeContentSizeImageInsets" minX="20" minY="14" maxX="20" maxY="0.0"/>
+                                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="esl-hy-yaq" kind="show" id="KWd-A8-z9m"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="graph2" style="done" id="xGT-eB-D6z">
+                                        <inset key="imageInsets" minX="0.0" minY="-4" maxX="0.0" maxY="0.0"/>
+                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -341,12 +341,12 @@
                                     <constraint firstAttribute="height" constant="44" id="gYk-qh-yDX"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="compose" id="jgV-i4-7Aw">
+                                    <barButtonItem image="export" id="jgV-i4-7Aw">
                                         <connections>
                                             <action selector="exportButton:" destination="esl-hy-yaq" id="C9e-Ef-kao"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="organize" id="gqC-70-TTE">
+                                    <barButtonItem image="import" id="gqC-70-TTE">
                                         <connections>
                                             <action selector="importButton:" destination="esl-hy-yaq" id="qBd-Kt-Dgz"/>
                                         </connections>
@@ -395,8 +395,10 @@
     </scenes>
     <resources>
         <image name="checked" width="25" height="25"/>
+        <image name="export" width="29" height="29"/>
         <image name="fulltank_step2" width="501" height="501"/>
         <image name="graph2" width="30" height="30"/>
+        <image name="import" width="29" height="29"/>
         <image name="list7" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
