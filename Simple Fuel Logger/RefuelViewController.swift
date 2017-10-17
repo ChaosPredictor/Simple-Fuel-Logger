@@ -19,6 +19,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var today: CheckBox!
     @IBOutlet weak var fullTank: CheckBox!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     
 
     
@@ -139,6 +140,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         fuelField.placeholder = "Volume"
         distanceField.placeholder = "Distance"
         priceField.placeholder = "Price"
+        totalPriceLabel.text = "0₪"
     }
     
     override func viewDidLoad() {
