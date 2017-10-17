@@ -155,7 +155,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-
+    // MARK: - Table
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let refuels = getRefuelsFromCoreData()
@@ -170,7 +170,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if refuels.count > 0 {
             let refuel = refuels[indexPath.row]
             cell.volumeLabel?.text = "\(refuel.volume)ℓ"
-            cell.distanceLabel?.text = "\(refuel.distance)km"
+            if refuel.distance != -1 {
+                cell.distanceLabel?.text = "\(refuel.distance)km"
+            } else {
+                cell.distanceLabel?.text = ""
+            }
             cell.dateLabel?.text = dateToString(date: refuel.date)
             cell.tankImageView.image = fullOrEmptyTankImage(full: refuel.full)
         }
