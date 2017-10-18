@@ -140,7 +140,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         fuelField.placeholder = "Volume"
         distanceField.placeholder = "Distance"
         priceField.placeholder = "Price"
-        totalPriceLabel.text = "0₪"
+        totalPriceLabel.text = ""
     }
     
     override func viewDidLoad() {
@@ -149,6 +149,9 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         fuelField.becomeFirstResponder()
         fuelField.nextNavigationField = distanceField
         distanceField.nextNavigationField = priceField
+        
+        priceField.addTarget(self, action: #selector(fieldsDidChange(_:)), for: .editingChanged)
+        fuelField.addTarget(self, action: #selector(fieldsDidChange(_:)), for: .editingChanged)
         
         if index != -1 {
             
@@ -161,11 +164,22 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         } else {
             
             editMode = false
-            
             initAddRefuel()
             
         }
 
+    }
+    
+    @objc func fieldsDidChange(_ textField: UITextField) {
+        if let price = Double(priceField.text ?? "0"){
+            if let volume = Double(fuelField.text ?? "0"){
+                totalPriceLabel.text = String(price * volume)+"₪"
+            } else {
+                totalPriceLabel.text = ""
+            }
+        } else {
+            totalPriceLabel.text = ""
+        }
     }
 
     override func didReceiveMemoryWarning() {

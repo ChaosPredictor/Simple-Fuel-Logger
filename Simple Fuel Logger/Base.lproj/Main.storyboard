@@ -94,14 +94,8 @@
                                             <constraint firstAttribute="height" constant="30" id="IlQ-zj-amD"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM5-wp-hn0">
-                                        <rect key="frame" x="0.0" y="135" width="374" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <stackView opaque="NO" contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="t8O-8E-lyM">
-                                        <rect key="frame" x="0.0" y="150" width="374" height="100"/>
+                                        <rect key="frame" x="0.0" y="135" width="374" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6og-s3-vFQ" customClass="CheckBox" customModule="Simple_Fuel_Logger">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="100"/>
@@ -175,6 +169,12 @@
                                             <constraint firstAttribute="bottom" secondItem="DkQ-Tp-2MW" secondAttribute="bottom" id="xKg-Ru-lHa"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM5-wp-hn0">
+                                        <rect key="frame" x="0.0" y="250" width="374" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjL-vN-zAT">
                                         <rect key="frame" x="0.0" y="265" width="374" height="387"/>
                                     </stackView>
