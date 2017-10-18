@@ -147,8 +147,8 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         super.viewDidLoad()
 
         fuelField.becomeFirstResponder()
-        fuelField.nextNavigationField = distanceField
         distanceField.nextNavigationField = priceField
+        priceField.nextNavigationField = fuelField
         
         priceField.addTarget(self, action: #selector(fieldsDidChange(_:)), for: .editingChanged)
         fuelField.addTarget(self, action: #selector(fieldsDidChange(_:)), for: .editingChanged)
