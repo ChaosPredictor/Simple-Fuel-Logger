@@ -193,7 +193,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     @objc func fieldsDidChange(_ textField: UITextField) {
         if let price = Double(priceField.text ?? "0"){
             if let volume = Double(fuelField.text ?? "0"){
-                totalPriceLabel.text = String(price * volume)+"₪"
+                totalPriceLabel.text = String((price * volume).rounded(toPlaces: 2))+"₪"
             } else {
                 totalPriceLabel.text = ""
             }
