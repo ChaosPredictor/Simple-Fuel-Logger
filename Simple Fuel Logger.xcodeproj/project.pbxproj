@@ -15,6 +15,7 @@
 		AF2E1ED51F8B82D0005C9116 /* SimpleFuelLogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF2E1ED21F8AC4FF005C9116 /* SimpleFuelLogger.xcdatamodeld */; };
 		AF2E1ED71F8CB527005C9116 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2E1ED61F8CB527005C9116 /* CheckBox.swift */; };
 		AFBDB63C1F977C2A00C45B42 /* ExtensionDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDB63B1F977C2A00C45B42 /* ExtensionDouble.swift */; };
+		AFBDB63E1F97A9F400C45B42 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDB63D1F97A9F400C45B42 /* ExtensionString.swift */; };
 		AFC34A811F879DD600DE9B16 /* RefuelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC34A801F879DD600DE9B16 /* RefuelTableViewCell.swift */; };
 		AFC34A831F8808E100DE9B16 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC34A821F8808E100DE9B16 /* ListViewController.swift */; };
 		AFCC628B1F84360900CFA959 /* Pods-Simple Fuel Logger.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A68B8CC7A9556E85D3F56E0A /* Pods-Simple Fuel Logger.debug.xcconfig */; };
@@ -35,6 +36,7 @@
 		AF2E1ED31F8AC4FF005C9116 /* SimpleFuelLogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleFuelLogger.xcdatamodel; sourceTree = "<group>"; };
 		AF2E1ED61F8CB527005C9116 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		AFBDB63B1F977C2A00C45B42 /* ExtensionDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDouble.swift; sourceTree = "<group>"; };
+		AFBDB63D1F97A9F400C45B42 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		AFC34A801F879DD600DE9B16 /* RefuelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuelTableViewCell.swift; sourceTree = "<group>"; };
 		AFC34A821F8808E100DE9B16 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		EC74C44B7A240DE9745FC099 /* Pods_Simple_Fuel_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Fuel_Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +86,6 @@
 				AF177F371F7C37CE00CE7899 /* AppDelegate.swift */,
 				AF2E1ED21F8AC4FF005C9116 /* SimpleFuelLogger.xcdatamodeld */,
 				AF177F391F7C37CE00CE7899 /* RefuelViewController.swift */,
-				AFBDB63B1F977C2A00C45B42 /* ExtensionDouble.swift */,
 				AF177F3B1F7C37CE00CE7899 /* Main.storyboard */,
 				AFC34A821F8808E100DE9B16 /* ListViewController.swift */,
 				AFC34A801F879DD600DE9B16 /* RefuelTableViewCell.swift */,
@@ -92,6 +93,8 @@
 				AF177F3E1F7C37CE00CE7899 /* Assets.xcassets */,
 				AF177F401F7C37CE00CE7899 /* LaunchScreen.storyboard */,
 				AF177F431F7C37CE00CE7899 /* Info.plist */,
+				AFBDB63B1F977C2A00C45B42 /* ExtensionDouble.swift */,
+				AFBDB63D1F97A9F400C45B42 /* ExtensionString.swift */,
 			);
 			path = "Simple Fuel Logger";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				AF177F381F7C37CE00CE7899 /* AppDelegate.swift in Sources */,
 				AFBDB63C1F977C2A00C45B42 /* ExtensionDouble.swift in Sources */,
 				AF2E1ED71F8CB527005C9116 /* CheckBox.swift in Sources */,
+				AFBDB63E1F97A9F400C45B42 /* ExtensionString.swift in Sources */,
 				AFC34A831F8808E100DE9B16 /* ListViewController.swift in Sources */,
 				AF2E1ED51F8B82D0005C9116 /* SimpleFuelLogger.xcdatamodeld in Sources */,
 				AFC34A811F879DD600DE9B16 /* RefuelTableViewCell.swift in Sources */,
