@@ -102,7 +102,21 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
             }
 
         }
+        
+        cleanFields()
 
+    }
+    
+    func cleanFields() {
+        distanceField.text = ""
+        priceField.text = ""
+        fuelField.text = ""
+        fullTank.isChecked = true
+        today.isChecked = true
+        datePicker.isHidden = true
+        todayLabel.isHidden = false
+        totalPriceLabel.text = ""
+        distanceField.becomeFirstResponder()
     }
     
     func getRefuel(index: Int) -> Refuel? {
