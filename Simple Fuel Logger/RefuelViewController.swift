@@ -60,6 +60,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     
     @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
         if editMode {
+            //EDIT
             print("edit mode save")
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
@@ -83,8 +84,10 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
             } catch {
                 
             }
-            
+            _ = navigationController?.popViewController(animated: true)
+
         } else {
+            //ADD
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let refuel = Refuel(context: context)
 
@@ -101,10 +104,13 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
 
+            cleanFields()
+            
+            self.performSegue(withIdentifier: "refuelList", sender: self)
+            
         }
         
-        cleanFields()
-
+        
     }
     
     func cleanFields() {
