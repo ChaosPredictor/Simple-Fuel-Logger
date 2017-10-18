@@ -12,7 +12,8 @@ import CoreData
 
 class RefuelViewController: UIViewController, NavigationFieldDelegate {
 
-    @IBOutlet weak var fuelField: UITextField!
+    
+    @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var distanceField: UITextField!
     @IBOutlet weak var priceField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -38,7 +39,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     }
     
     func readRefuelFromField(refuel: Refuel) {
-        refuel.volume = Double(fuelField.text!) ?? 0
+        refuel.volume = Double(amountField.text!) ?? 0
         refuel.distance = Double(distanceField.text!) ?? -1
         refuel.price = Double(priceField.text!) ?? 0
         refuel.full = fullTank.isChecked
@@ -51,7 +52,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     }
     
     func writeRefuelToField(refuel: Refuel) {
-        fuelField.text = String(describing: refuel.volume)
+        amountField.text = String(describing: refuel.volume)
         distanceField.text = String(describing: refuel.distance)
         priceField.text = String(describing: refuel.price)
         datePicker.date = (refuel.date)!
@@ -118,7 +119,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     func cleanFields() {
         distanceField.text = ""
         priceField.text = ""
-        fuelField.text = ""
+        amountField.text = ""
         fullTank.isChecked = true
         today.isChecked = true
         datePicker.isHidden = true
@@ -160,7 +161,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.isHidden = true
         
-        fuelField.placeholder = "Volume"
+        amountField.placeholder = "Amount"
         distanceField.placeholder = "Distance"
         priceField.placeholder = "Price"
         totalPriceLabel.text = ""
@@ -171,10 +172,10 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
 
         distanceField.becomeFirstResponder()
         distanceField.nextNavigationField = priceField
-        priceField.nextNavigationField = fuelField
+        priceField.nextNavigationField = amountField
         
         priceField.addTarget(self, action: #selector(fieldsDidChange(_:)), for: .editingChanged)
-        fuelField.addTarget(self, action: #selector(fieldsDidChange(_:)), for: .editingChanged)
+        amountField.addTarget(self, action: #selector(fieldsDidChange(_:)), for: .editingChanged)
         
         if index != -1 {
             
@@ -195,7 +196,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     
     @objc func fieldsDidChange(_ textField: UITextField) {
         if let price = Double(priceField.text ?? "0"){
-            if let volume = Double(fuelField.text ?? "0"){
+            if let volume = Double(amountField.text ?? "0"){
                 let total = String((price * volume).rounded(toPlaces: 2))
                 totalPriceLabel.text = total.padAsDoubleFromRight(totalWidth: 2, with: "0") + "₪"
             } else {
