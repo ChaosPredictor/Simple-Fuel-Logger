@@ -56,6 +56,8 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         priceField.text = String(describing: refuel.price)
         datePicker.date = (refuel.date)!
         fullTank.isChecked = refuel.full
+        fieldsDidChange(distanceField)
+        
     }
     
     @IBAction func saveRefuel(_ sender: UIBarButtonItem) {
@@ -149,6 +151,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
         todayLabel.isHidden = true
         today.isChecked = false
         writeRefuelToField(refuel: refuel)
+        
     }
     
     func initAddRefuel() {
