@@ -146,7 +146,7 @@ class RefuelViewController: UIViewController, NavigationFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fuelField.becomeFirstResponder()
+        distanceField.becomeFirstResponder()
         distanceField.nextNavigationField = priceField
         priceField.nextNavigationField = fuelField
         
