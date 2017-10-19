@@ -207,6 +207,11 @@
                                             <segue destination="zAw-uA-xyU" kind="show" id="jOu-8x-JXc"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem systemItem="reply" id="mz5-PN-eqD">
+                                        <connections>
+                                            <segue destination="p0M-MI-Bff" kind="show" id="HOW-2w-z9J"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -258,7 +263,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vva-6c-4VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="130"/>
+            <point key="canvasLocation" x="1238" y="130"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Nz5-W5-0Rn">
+            <objects>
+                <viewController title="Settings" id="p0M-MI-Bff" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NST-K8-9w6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="9M1-10-Uwd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0GP-hw-RZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238" y="885"/>
         </scene>
         <!--Refuel list-->
         <scene sceneID="wgA-Wv-L3X">
@@ -396,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFg-Hx-hvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="-619"/>
+            <point key="canvasLocation" x="1239" y="-624"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lIw-UL-fKh">
