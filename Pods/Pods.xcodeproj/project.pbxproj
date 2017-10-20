@@ -3,84 +3,157 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10A63CB655F700A068FE37F0613BF8E5 /* NavigationFieldToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258DDCF75A3610EACEBFEBC2B48EEEE /* NavigationFieldToolbarButtonItem.swift */; };
-		145F280253336D1450E3FDD0A17B7CB5 /* NavigationFieldToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21975963563A0AC2078E3465C909163 /* NavigationFieldToolbar.swift */; };
-		2D1BC36667890BEF328A2600CEE58A54 /* NavigationFieldInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC52E14DF44CDD54E79300DAD15E9F7 /* NavigationFieldInternal.swift */; };
-		306FD00DE960D6D728C20224B4C5DC44 /* NavigationFieldImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3164894191956AC43FBE5114DF8E200 /* NavigationFieldImplementations.swift */; };
-		362B0430DAD650C6F05F826A15B0EF30 /* Pods-Simple Fuel Logger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 249A41E7E834A77374B5CA63CAAA8CBB /* Pods-Simple Fuel Logger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		471B13C57820A5029079CB36BCF8D5B0 /* UITextField-Navigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B246904B15C2FDE7DD53B7536A8304ED /* UITextField-Navigation-dummy.m */; };
-		777B1B9882656D3CC2AFE04084642D22 /* UITextField-Navigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2279304119EE5E8B257A78D4F8BE8783 /* UITextField-Navigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E98EB32C35DB45D5B1F5CD569AA3C64 /* Pods-Simple Fuel Logger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13E26AE82370A7E137304FD61129A7 /* Pods-Simple Fuel Logger-dummy.m */; };
-		A8E99ABFE45B3477CCA0B0BC3C222F7C /* NavigationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC7A3CE19A151EFF02F3919D16FFE27 /* NavigationField.swift */; };
-		B9B932C47E58B426F052073E95DE7A35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		C0C8E66FED152514FD8F925BAADE42FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		ED898E8066D32A7D15F8F8C8C2729CFE /* WeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DFE0D0553E0E535E99F2181EC927E /* WeakObjectContainer.swift */; };
+		01E09EBBC7EBA27671AFDA602DAC181B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		021694AF6A87960EF82D51DCD198A31B /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E41DFD6358D7FF6CF38F2292664CF6 /* DotPlot.swift */; };
+		0218B1B991966FB5A425AB19C7A8A864 /* ScrollableGraphViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A27D9D2CDF718D701EF0E7A64D392E /* ScrollableGraphViewDataSource.swift */; };
+		036705FFF394C5B77AF1C5C98A815CFD /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A29E13259DF311079FA7D83E5A0B66 /* Plot.swift */; };
+		097A0129A3C7860582BEF71E9EF9EC4F /* BarDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCE08E6E01C44C8F9BA5B7F5C29DAD4 /* BarDrawingLayer.swift */; };
+		17E96F56B37C3057778FF7192F018970 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		187E11AE7A8CC50D9A0A493583BC127B /* UITextField-Navigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78690B6E6AA77898C51A09DF88B561A6 /* UITextField-Navigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20385551930CB09A0FA8AFABE116259C /* ReferenceLineDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD24CD8760778E98E09C333B8E0782 /* ReferenceLineDrawingView.swift */; };
+		291325983BCDF1DA33F05F3F5F8FEDDA /* UITextField-Navigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FC84D10558F15CAF95BF2FDF45138 /* UITextField-Navigation-dummy.m */; };
+		2D0186B6FF73A4424E1710B14EDA2E01 /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E45441A25AB7572E20508679F8BCD /* LinePlot.swift */; };
+		2FF0C4A1024E1178D81422A874B1B896 /* ScrollableGraphViewDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B127C22510DC913B96F931EAE3DDB /* ScrollableGraphViewDrawingLayer.swift */; };
+		394BEFA6E12F45755DB1970DEEAD7F10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		3CF62EFCBFB122DA1BD126F83692FF85 /* ReferenceLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB85D04341A821854B9041D16D518FB /* ReferenceLines.swift */; };
+		457F9F0A644E927AFACD2A2F1DF939D8 /* FillDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9EC13021EF2BCBCA5258D37FFFE18A /* FillDrawingLayer.swift */; };
+		64017C8CDA78FB39BE8B5DB44B09A0CA /* ScrollableGraphView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D057EDD0984CCF0C0CEBDB65169A605 /* ScrollableGraphView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		770172C4433F7BD06E018DF70DA1F0A3 /* ScrollableGraphViewDrawingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635918E0FA9E015BE37E22BDB00F06F7 /* ScrollableGraphViewDrawingDelegate.swift */; };
+		790F77DFBAF49D4205507626877BB30A /* DotDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C1A957744A59E2D2B751C8C8FBA8D /* DotDrawingLayer.swift */; };
+		879171E3B263F3A8349DDD171D48FEB3 /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D427F50C6306204C01DC508A68FC /* ScrollableGraphView.swift */; };
+		A35EDB1E99C0233F60687D8EB6A337ED /* ScrollableGraphView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A030B9412D3943B5781715159C1564 /* ScrollableGraphView-dummy.m */; };
+		A5ECDCF8E0E6E6D217408BEF85F208FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		ABB98C6F3F24711AD76144E17BF1FA63 /* GradientDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2EFD522B6FE0576254EDD025C60C3 /* GradientDrawingLayer.swift */; };
+		AEC235F20DF4B6057E5F2B5CFE742AFA /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC411A66B0FCAEEAD966DC1C8B61287F /* BarPlot.swift */; };
+		B051652D61E8AB28EB1ACA1C92D1D68C /* LabelPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77639680868452C9694A36CAD0D99F /* LabelPool.swift */; };
+		B60119A6BD0F8DBDE1FDC9B0EB6C4107 /* NavigationFieldImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3DB63285183618D766880D77B113B /* NavigationFieldImplementations.swift */; };
+		BDE185171DC724189DFFB397E2939228 /* GraphPointAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F479766BF9B757F75BF9A4640C0AB /* GraphPointAnimation.swift */; };
+		C1766DAB588354C8841DD3A9CA8F2AFC /* NavigationFieldToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281E38A32C3DDB02EC5CA72B1D54DE4A /* NavigationFieldToolbarButtonItem.swift */; };
+		C3E2A5238A760EE412BF4B9179BF15AB /* NavigationFieldToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA6DB4568C4F06D8BF6882AA44F035A /* NavigationFieldToolbar.swift */; };
+		DBF321375DD722A4B7E0C2D16A9C684B /* Pods-Simple Fuel Logger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 249A41E7E834A77374B5CA63CAAA8CBB /* Pods-Simple Fuel Logger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4FA8FDD7142C64AE0E3DDF7961F7D5F /* NavigationFieldInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E1FC5FA71B778AB9FCA31459DA8311 /* NavigationFieldInternal.swift */; };
+		E756121FF6186AFBA99C49372E05F361 /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2373DA5EB1B23F8921EE135FCDF25F /* GraphPoint.swift */; };
+		EDAD3D9291900953AB7AA8852DF1DF6B /* LineDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7334BF0339CEA7E581361D0B0AA6CD8E /* LineDrawingLayer.swift */; };
+		EF031F48CDC6B88A69EE351F504D7FEA /* WeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D873CD62D090809CF0E2CADCBB5EE0D /* WeakObjectContainer.swift */; };
+		F0A6A82FDA14293A039AB766685A3FEA /* Pods-Simple Fuel Logger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13E26AE82370A7E137304FD61129A7 /* Pods-Simple Fuel Logger-dummy.m */; };
+		F5B9013052851192DB69F21AC0FDD7E2 /* NavigationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD5F4A73F00626101CC4CDD22192C6A /* NavigationField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C7C7002B24C595EE458F3E125A2467E9 /* PBXContainerItemProxy */ = {
+		0F1C4FFA3C981C6DE8F68F5BCCF2B769 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5623E89CCBCD47B63576FF758108F45A;
+			remoteGlobalIDString = 00FEF161F6D7781157A4C8445C301D57;
 			remoteInfo = "UITextField-Navigation";
+		};
+		DF2DB882381B99F3038E427C21624944 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 901E17CA00730EEA9EA7F5B47AAED21A;
+			remoteInfo = ScrollableGraphView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C8E45441A25AB7572E20508679F8BCD /* LinePlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinePlot.swift; path = Classes/Plots/LinePlot.swift; sourceTree = "<group>"; };
+		0FD5F4A73F00626101CC4CDD22192C6A /* NavigationField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationField.swift; path = "UITextField-Navigation/Classes/NavigationField.swift"; sourceTree = "<group>"; };
+		0FFB781F9319DF15FF6A3BF24D79ED38 /* ScrollableGraphView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScrollableGraphView-prefix.pch"; sourceTree = "<group>"; };
 		10145BE029AA53BF00759D61F6D99C71 /* Pods-Simple Fuel Logger-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Simple Fuel Logger-resources.sh"; sourceTree = "<group>"; };
+		15E1FC5FA71B778AB9FCA31459DA8311 /* NavigationFieldInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldInternal.swift; path = "UITextField-Navigation/Classes/NavigationFieldInternal.swift"; sourceTree = "<group>"; };
+		1D057EDD0984CCF0C0CEBDB65169A605 /* ScrollableGraphView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScrollableGraphView-umbrella.h"; sourceTree = "<group>"; };
+		1D873CD62D090809CF0E2CADCBB5EE0D /* WeakObjectContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakObjectContainer.swift; path = "UITextField-Navigation/Classes/WeakObjectContainer.swift"; sourceTree = "<group>"; };
 		1E5399B99513D0CAA7F0CB213FB717A1 /* Pods-Simple Fuel Logger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Fuel Logger.debug.xcconfig"; sourceTree = "<group>"; };
-		2279304119EE5E8B257A78D4F8BE8783 /* UITextField-Navigation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-umbrella.h"; sourceTree = "<group>"; };
 		249A41E7E834A77374B5CA63CAAA8CBB /* Pods-Simple Fuel Logger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Simple Fuel Logger-umbrella.h"; sourceTree = "<group>"; };
+		281E38A32C3DDB02EC5CA72B1D54DE4A /* NavigationFieldToolbarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldToolbarButtonItem.swift; path = "UITextField-Navigation/Classes/NavigationFieldToolbarButtonItem.swift"; sourceTree = "<group>"; };
+		2D4B127C22510DC913B96F931EAE3DDB /* ScrollableGraphViewDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDrawingLayer.swift; path = Classes/Drawing/ScrollableGraphViewDrawingLayer.swift; sourceTree = "<group>"; };
+		2E9FC84D10558F15CAF95BF2FDF45138 /* UITextField-Navigation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField-Navigation-dummy.m"; sourceTree = "<group>"; };
+		303C501D435AF4C02531A7D8709AB718 /* ScrollableGraphView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScrollableGraphView.xcconfig; sourceTree = "<group>"; };
+		36C80AD791456309373BF6D346E5E671 /* UITextField-Navigation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextField-Navigation.xcconfig"; sourceTree = "<group>"; };
+		3A77639680868452C9694A36CAD0D99F /* LabelPool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelPool.swift; path = Classes/Reference/LabelPool.swift; sourceTree = "<group>"; };
 		3E13E26AE82370A7E137304FD61129A7 /* Pods-Simple Fuel Logger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Simple Fuel Logger-dummy.m"; sourceTree = "<group>"; };
 		3ED22BF23C7CC280CA12888573F36A9D /* Pods-Simple Fuel Logger-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Simple Fuel Logger-frameworks.sh"; sourceTree = "<group>"; };
-		571785CD751DB440C28C796536B48898 /* Pods_Simple_Fuel_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Fuel_Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		712DFE0D0553E0E535E99F2181EC927E /* WeakObjectContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakObjectContainer.swift; path = "UITextField-Navigation/Classes/WeakObjectContainer.swift"; sourceTree = "<group>"; };
-		7F40A68ED87E9E0D64A5DB748C6ECF5D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9258DDCF75A3610EACEBFEBC2B48EEEE /* NavigationFieldToolbarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldToolbarButtonItem.swift; path = "UITextField-Navigation/Classes/NavigationFieldToolbarButtonItem.swift"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		40B3DB63285183618D766880D77B113B /* NavigationFieldImplementations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldImplementations.swift; path = "UITextField-Navigation/Classes/NavigationFieldImplementations.swift"; sourceTree = "<group>"; };
+		45F2EFD522B6FE0576254EDD025C60C3 /* GradientDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientDrawingLayer.swift; path = Classes/Drawing/GradientDrawingLayer.swift; sourceTree = "<group>"; };
+		521A25F521F60B86F521BE28CDEBDD3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54CDA332D9FAD1E29A8CA44A6D5858FB /* UITextField-Navigation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-prefix.pch"; sourceTree = "<group>"; };
+		555F479766BF9B757F75BF9A4640C0AB /* GraphPointAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphPointAnimation.swift; path = Classes/Plots/Animation/GraphPointAnimation.swift; sourceTree = "<group>"; };
+		57FFFC8FEAD65161778BF65AF5140053 /* UITextField_Navigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UITextField_Navigation.framework; path = "UITextField-Navigation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6C1A957744A59E2D2B751C8C8FBA8D /* DotDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotDrawingLayer.swift; path = Classes/Drawing/DotDrawingLayer.swift; sourceTree = "<group>"; };
+		61A27D9D2CDF718D701EF0E7A64D392E /* ScrollableGraphViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDataSource.swift; path = Classes/Protocols/ScrollableGraphViewDataSource.swift; sourceTree = "<group>"; };
+		635918E0FA9E015BE37E22BDB00F06F7 /* ScrollableGraphViewDrawingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDrawingDelegate.swift; path = Classes/Protocols/ScrollableGraphViewDrawingDelegate.swift; sourceTree = "<group>"; };
+		7232156CF57E4A801DAA28248F1FE51D /* Pods_Simple_Fuel_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Simple_Fuel_Logger.framework; path = "Pods-Simple Fuel Logger.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A030B9412D3943B5781715159C1564 /* ScrollableGraphView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScrollableGraphView-dummy.m"; sourceTree = "<group>"; };
+		7334BF0339CEA7E581361D0B0AA6CD8E /* LineDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineDrawingLayer.swift; path = Classes/Drawing/LineDrawingLayer.swift; sourceTree = "<group>"; };
+		770DDFF375E84701C94D66DB50B7D0E0 /* ScrollableGraphView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScrollableGraphView.framework; path = ScrollableGraphView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78690B6E6AA77898C51A09DF88B561A6 /* UITextField-Navigation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-umbrella.h"; sourceTree = "<group>"; };
+		8CB85D04341A821854B9041D16D518FB /* ReferenceLines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceLines.swift; path = Classes/Reference/ReferenceLines.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		955AE219287E1C7DAA731F92F8401EFF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98F47637B73D53BC7337DDE5EAB198EB /* Pods-Simple Fuel Logger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Fuel Logger.release.xcconfig"; sourceTree = "<group>"; };
-		9D331EF64F605526367BB4E9986BB1F6 /* UITextField-Navigation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation-prefix.pch"; sourceTree = "<group>"; };
-		A21975963563A0AC2078E3465C909163 /* NavigationFieldToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldToolbar.swift; path = "UITextField-Navigation/Classes/NavigationFieldToolbar.swift"; sourceTree = "<group>"; };
-		B246904B15C2FDE7DD53B7536A8304ED /* UITextField-Navigation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField-Navigation-dummy.m"; sourceTree = "<group>"; };
+		A0A29E13259DF311079FA7D83E5A0B66 /* Plot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Plot.swift; path = Classes/Plots/Plot.swift; sourceTree = "<group>"; };
+		A9FAC701E3DFDA03C415A7F8E840FCFC /* UITextField-Navigation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "UITextField-Navigation.modulemap"; sourceTree = "<group>"; };
+		AB9EC13021EF2BCBCA5258D37FFFE18A /* FillDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillDrawingLayer.swift; path = Classes/Drawing/FillDrawingLayer.swift; sourceTree = "<group>"; };
+		B2CD24CD8760778E98E09C333B8E0782 /* ReferenceLineDrawingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceLineDrawingView.swift; path = Classes/Drawing/ReferenceLineDrawingView.swift; sourceTree = "<group>"; };
+		B522D427F50C6306204C01DC508A68FC /* ScrollableGraphView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphView.swift; path = Classes/ScrollableGraphView.swift; sourceTree = "<group>"; };
+		B5A8E8E862BE3591858367AC04C78CB6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BC411A66B0FCAEEAD966DC1C8B61287F /* BarPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPlot.swift; path = Classes/Plots/BarPlot.swift; sourceTree = "<group>"; };
+		C1E41DFD6358D7FF6CF38F2292664CF6 /* DotPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotPlot.swift; path = Classes/Plots/DotPlot.swift; sourceTree = "<group>"; };
 		C98D1088612978B4EAD43B69F3692CA5 /* Pods-Simple Fuel Logger-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Simple Fuel Logger-acknowledgements.plist"; sourceTree = "<group>"; };
-		CE03902BBB62AE43B00B9A0D48C8252C /* UITextField-Navigation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextField-Navigation.xcconfig"; sourceTree = "<group>"; };
-		D219BB783191DF3D0C53B177B9891B48 /* Pods-Simple Fuel Logger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Simple Fuel Logger.modulemap"; sourceTree = "<group>"; };
+		CA2373DA5EB1B23F8921EE135FCDF25F /* GraphPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphPoint.swift; path = Classes/Plots/Animation/GraphPoint.swift; sourceTree = "<group>"; };
+		CFCE08E6E01C44C8F9BA5B7F5C29DAD4 /* BarDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarDrawingLayer.swift; path = Classes/Drawing/BarDrawingLayer.swift; sourceTree = "<group>"; };
+		D219BB783191DF3D0C53B177B9891B48 /* Pods-Simple Fuel Logger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Simple Fuel Logger.modulemap"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DCD0E6C0280F9D2955DB8DFD94E4D183 /* UITextField-Navigation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UITextField-Navigation.modulemap"; sourceTree = "<group>"; };
 		DE85658E87D2D96064027344052A2C91 /* Pods-Simple Fuel Logger-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Simple Fuel Logger-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DEC7A3CE19A151EFF02F3919D16FFE27 /* NavigationField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationField.swift; path = "UITextField-Navigation/Classes/NavigationField.swift"; sourceTree = "<group>"; };
-		E3164894191956AC43FBE5114DF8E200 /* NavigationFieldImplementations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldImplementations.swift; path = "UITextField-Navigation/Classes/NavigationFieldImplementations.swift"; sourceTree = "<group>"; };
-		EFC52E14DF44CDD54E79300DAD15E9F7 /* NavigationFieldInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldInternal.swift; path = "UITextField-Navigation/Classes/NavigationFieldInternal.swift"; sourceTree = "<group>"; };
-		F4B43581524FF01E48A26BA663437E4F /* UITextField_Navigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITextField_Navigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DE9B8D9070147E51225151DC3B5EAD /* ScrollableGraphView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ScrollableGraphView.modulemap; sourceTree = "<group>"; };
+		FDA6DB4568C4F06D8BF6882AA44F035A /* NavigationFieldToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationFieldToolbar.swift; path = "UITextField-Navigation/Classes/NavigationFieldToolbar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7C37BE08D3F2701E48AA05F92A67E621 /* Frameworks */ = {
+		81A52179E66EF07E00B40CEE775EEEA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B932C47E58B426F052073E95DE7A35 /* Foundation.framework in Frameworks */,
-				C0C8E66FED152514FD8F925BAADE42FB /* UIKit.framework in Frameworks */,
+				01E09EBBC7EBA27671AFDA602DAC181B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9415A62BC8E3DD81528F62A33D976CE9 /* Frameworks */ = {
+		CEB99EE8AA10CB9E414D4F113A2DB9DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E96F56B37C3057778FF7192F018970 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E80BE82151843CF7EE03E55F01C5175A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				394BEFA6E12F45755DB1970DEEAD7F10 /* Foundation.framework in Frameworks */,
+				A5ECDCF8E0E6E6D217408BEF85F208FA /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D3E9E59374521337E066D355A31997A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7232156CF57E4A801DAA28248F1FE51D /* Pods_Simple_Fuel_Logger.framework */,
+				770DDFF375E84701C94D66DB50B7D0E0 /* ScrollableGraphView.framework */,
+				57FFFC8FEAD65161778BF65AF5140053 /* UITextField_Navigation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,26 +171,40 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5495472CEC0B68D3BB1F68D2CA836BD3 /* Pods */ = {
+		5878148CFFBDD26B0CBCC6E5BF762DC2 /* ScrollableGraphView */ = {
 			isa = PBXGroup;
 			children = (
-				75F01F715A805F0BDDDB766FD086BA00 /* UITextField-Navigation */,
+				CFCE08E6E01C44C8F9BA5B7F5C29DAD4 /* BarDrawingLayer.swift */,
+				BC411A66B0FCAEEAD966DC1C8B61287F /* BarPlot.swift */,
+				5F6C1A957744A59E2D2B751C8C8FBA8D /* DotDrawingLayer.swift */,
+				C1E41DFD6358D7FF6CF38F2292664CF6 /* DotPlot.swift */,
+				AB9EC13021EF2BCBCA5258D37FFFE18A /* FillDrawingLayer.swift */,
+				45F2EFD522B6FE0576254EDD025C60C3 /* GradientDrawingLayer.swift */,
+				CA2373DA5EB1B23F8921EE135FCDF25F /* GraphPoint.swift */,
+				555F479766BF9B757F75BF9A4640C0AB /* GraphPointAnimation.swift */,
+				3A77639680868452C9694A36CAD0D99F /* LabelPool.swift */,
+				7334BF0339CEA7E581361D0B0AA6CD8E /* LineDrawingLayer.swift */,
+				0C8E45441A25AB7572E20508679F8BCD /* LinePlot.swift */,
+				A0A29E13259DF311079FA7D83E5A0B66 /* Plot.swift */,
+				B2CD24CD8760778E98E09C333B8E0782 /* ReferenceLineDrawingView.swift */,
+				8CB85D04341A821854B9041D16D518FB /* ReferenceLines.swift */,
+				B522D427F50C6306204C01DC508A68FC /* ScrollableGraphView.swift */,
+				61A27D9D2CDF718D701EF0E7A64D392E /* ScrollableGraphViewDataSource.swift */,
+				635918E0FA9E015BE37E22BDB00F06F7 /* ScrollableGraphViewDrawingDelegate.swift */,
+				2D4B127C22510DC913B96F931EAE3DDB /* ScrollableGraphViewDrawingLayer.swift */,
+				E5C4B5DAD951FE66E76E8C5AD804B1A9 /* Support Files */,
 			);
-			name = Pods;
+			name = ScrollableGraphView;
+			path = ScrollableGraphView;
 			sourceTree = "<group>";
 		};
-		75F01F715A805F0BDDDB766FD086BA00 /* UITextField-Navigation */ = {
+		62AF8D26F81080E327C5C8A9EAECFD6D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DEC7A3CE19A151EFF02F3919D16FFE27 /* NavigationField.swift */,
-				E3164894191956AC43FBE5114DF8E200 /* NavigationFieldImplementations.swift */,
-				EFC52E14DF44CDD54E79300DAD15E9F7 /* NavigationFieldInternal.swift */,
-				A21975963563A0AC2078E3465C909163 /* NavigationFieldToolbar.swift */,
-				9258DDCF75A3610EACEBFEBC2B48EEEE /* NavigationFieldToolbarButtonItem.swift */,
-				712DFE0D0553E0E535E99F2181EC927E /* WeakObjectContainer.swift */,
-				E03C31E1F3B5C2226684D8255979D687 /* Support Files */,
+				5878148CFFBDD26B0CBCC6E5BF762DC2 /* ScrollableGraphView */,
+				B9C37B66CB6DA79CEE4FC689361F5F8A /* UITextField-Navigation */,
 			);
-			path = "UITextField-Navigation";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -125,19 +212,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				5495472CEC0B68D3BB1F68D2CA836BD3 /* Pods */,
-				7DF0101551293919AC3B8805F8F0A4FC /* Products */,
+				62AF8D26F81080E327C5C8A9EAECFD6D /* Pods */,
+				3D3E9E59374521337E066D355A31997A /* Products */,
 				D1F083E2261C539D3DEC50A77F826D3A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7DF0101551293919AC3B8805F8F0A4FC /* Products */ = {
+		892B0A7B0E420701B1632B8DD22423DE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				571785CD751DB440C28C796536B48898 /* Pods_Simple_Fuel_Logger.framework */,
-				F4B43581524FF01E48A26BA663437E4F /* UITextField_Navigation.framework */,
+				521A25F521F60B86F521BE28CDEBDD3E /* Info.plist */,
+				A9FAC701E3DFDA03C415A7F8E840FCFC /* UITextField-Navigation.modulemap */,
+				36C80AD791456309373BF6D346E5E671 /* UITextField-Navigation.xcconfig */,
+				2E9FC84D10558F15CAF95BF2FDF45138 /* UITextField-Navigation-dummy.m */,
+				54CDA332D9FAD1E29A8CA44A6D5858FB /* UITextField-Navigation-prefix.pch */,
+				78690B6E6AA77898C51A09DF88B561A6 /* UITextField-Navigation-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/UITextField-Navigation";
 			sourceTree = "<group>";
 		};
 		8C4D112768E02B345572B935A9214218 /* Pods-Simple Fuel Logger */ = {
@@ -158,6 +250,21 @@
 			path = "Target Support Files/Pods-Simple Fuel Logger";
 			sourceTree = "<group>";
 		};
+		B9C37B66CB6DA79CEE4FC689361F5F8A /* UITextField-Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0FD5F4A73F00626101CC4CDD22192C6A /* NavigationField.swift */,
+				40B3DB63285183618D766880D77B113B /* NavigationFieldImplementations.swift */,
+				15E1FC5FA71B778AB9FCA31459DA8311 /* NavigationFieldInternal.swift */,
+				FDA6DB4568C4F06D8BF6882AA44F035A /* NavigationFieldToolbar.swift */,
+				281E38A32C3DDB02EC5CA72B1D54DE4A /* NavigationFieldToolbarButtonItem.swift */,
+				1D873CD62D090809CF0E2CADCBB5EE0D /* WeakObjectContainer.swift */,
+				892B0A7B0E420701B1632B8DD22423DE /* Support Files */,
+			);
+			name = "UITextField-Navigation";
+			path = "UITextField-Navigation";
+			sourceTree = "<group>";
+		};
 		D1F083E2261C539D3DEC50A77F826D3A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,49 +273,57 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E03C31E1F3B5C2226684D8255979D687 /* Support Files */ = {
+		E5C4B5DAD951FE66E76E8C5AD804B1A9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7F40A68ED87E9E0D64A5DB748C6ECF5D /* Info.plist */,
-				DCD0E6C0280F9D2955DB8DFD94E4D183 /* UITextField-Navigation.modulemap */,
-				CE03902BBB62AE43B00B9A0D48C8252C /* UITextField-Navigation.xcconfig */,
-				B246904B15C2FDE7DD53B7536A8304ED /* UITextField-Navigation-dummy.m */,
-				9D331EF64F605526367BB4E9986BB1F6 /* UITextField-Navigation-prefix.pch */,
-				2279304119EE5E8B257A78D4F8BE8783 /* UITextField-Navigation-umbrella.h */,
+				B5A8E8E862BE3591858367AC04C78CB6 /* Info.plist */,
+				E5DE9B8D9070147E51225151DC3B5EAD /* ScrollableGraphView.modulemap */,
+				303C501D435AF4C02531A7D8709AB718 /* ScrollableGraphView.xcconfig */,
+				72A030B9412D3943B5781715159C1564 /* ScrollableGraphView-dummy.m */,
+				0FFB781F9319DF15FF6A3BF24D79ED38 /* ScrollableGraphView-prefix.pch */,
+				1D057EDD0984CCF0C0CEBDB65169A605 /* ScrollableGraphView-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/UITextField-Navigation";
+			path = "../Target Support Files/ScrollableGraphView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0301F416CCEE3BBD84CC6D4D88C7EADD /* Headers */ = {
+		7842FF9ACAC5EDC5229A4B268E3F1182 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				362B0430DAD650C6F05F826A15B0EF30 /* Pods-Simple Fuel Logger-umbrella.h in Headers */,
+				DBF321375DD722A4B7E0C2D16A9C684B /* Pods-Simple Fuel Logger-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAA32E2FED95B9DC6B39DABBE4774EEE /* Headers */ = {
+		A072BEF764C23E8F44EA4FC5B24E03EA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				777B1B9882656D3CC2AFE04084642D22 /* UITextField-Navigation-umbrella.h in Headers */,
+				64017C8CDA78FB39BE8B5DB44B09A0CA /* ScrollableGraphView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6B23E849A71DBCCF69AAF8B65BDDC11 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187E11AE7A8CC50D9A0A493583BC127B /* UITextField-Navigation-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5623E89CCBCD47B63576FF758108F45A /* UITextField-Navigation */ = {
+		00FEF161F6D7781157A4C8445C301D57 /* UITextField-Navigation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13207BB0BC0F6332883469F5A051ACCA /* Build configuration list for PBXNativeTarget "UITextField-Navigation" */;
+			buildConfigurationList = 2EF2CE4F46669828C78BB8E2DE7AD971 /* Build configuration list for PBXNativeTarget "UITextField-Navigation" */;
 			buildPhases = (
-				36862C1019873E2C1FF3C9305D695563 /* Sources */,
-				7C37BE08D3F2701E48AA05F92A67E621 /* Frameworks */,
-				CAA32E2FED95B9DC6B39DABBE4774EEE /* Headers */,
+				E19D06442E8038038F8510A7FC2F79FF /* Sources */,
+				E80BE82151843CF7EE03E55F01C5175A /* Frameworks */,
+				E6B23E849A71DBCCF69AAF8B65BDDC11 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -216,25 +331,43 @@
 			);
 			name = "UITextField-Navigation";
 			productName = "UITextField-Navigation";
-			productReference = F4B43581524FF01E48A26BA663437E4F /* UITextField_Navigation.framework */;
+			productReference = 57FFFC8FEAD65161778BF65AF5140053 /* UITextField_Navigation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9A41BECB162F493F1B6F710A03C3D893 /* Pods-Simple Fuel Logger */ = {
+		901E17CA00730EEA9EA7F5B47AAED21A /* ScrollableGraphView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6F15D6B4D3532D1B36C7307F8F8EA3D /* Build configuration list for PBXNativeTarget "Pods-Simple Fuel Logger" */;
+			buildConfigurationList = D1090E77961D5F13DE31C302EC49B5E6 /* Build configuration list for PBXNativeTarget "ScrollableGraphView" */;
 			buildPhases = (
-				A9298AE82E7D578D4A373B80DC10820E /* Sources */,
-				9415A62BC8E3DD81528F62A33D976CE9 /* Frameworks */,
-				0301F416CCEE3BBD84CC6D4D88C7EADD /* Headers */,
+				4684A2CEE887EDF6F1D293ED969B4140 /* Sources */,
+				81A52179E66EF07E00B40CEE775EEEA9 /* Frameworks */,
+				A072BEF764C23E8F44EA4FC5B24E03EA /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DAADE846A63B3288C5ED1A72B9073F3F /* PBXTargetDependency */,
+			);
+			name = ScrollableGraphView;
+			productName = ScrollableGraphView;
+			productReference = 770DDFF375E84701C94D66DB50B7D0E0 /* ScrollableGraphView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A197A7A4B67E55BA63FC99DD82619AF0 /* Pods-Simple Fuel Logger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8979912A42356DBA384030D78960306F /* Build configuration list for PBXNativeTarget "Pods-Simple Fuel Logger" */;
+			buildPhases = (
+				438E8AFE68EF9EA16FDC07BC7B87E18D /* Sources */,
+				CEB99EE8AA10CB9E414D4F113A2DB9DD /* Frameworks */,
+				7842FF9ACAC5EDC5229A4B268E3F1182 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E34612CBCCBF3C25F58C5C30FAB27A52 /* PBXTargetDependency */,
+				D07902CD585B24AE68C9C3B1B833792C /* PBXTargetDependency */,
 			);
 			name = "Pods-Simple Fuel Logger";
 			productName = "Pods-Simple Fuel Logger";
-			productReference = 571785CD751DB440C28C796536B48898 /* Pods_Simple_Fuel_Logger.framework */;
+			productReference = 7232156CF57E4A801DAA28248F1FE51D /* Pods_Simple_Fuel_Logger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +377,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -254,52 +387,242 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7DF0101551293919AC3B8805F8F0A4FC /* Products */;
+			productRefGroup = 3D3E9E59374521337E066D355A31997A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9A41BECB162F493F1B6F710A03C3D893 /* Pods-Simple Fuel Logger */,
-				5623E89CCBCD47B63576FF758108F45A /* UITextField-Navigation */,
+				A197A7A4B67E55BA63FC99DD82619AF0 /* Pods-Simple Fuel Logger */,
+				901E17CA00730EEA9EA7F5B47AAED21A /* ScrollableGraphView */,
+				00FEF161F6D7781157A4C8445C301D57 /* UITextField-Navigation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		36862C1019873E2C1FF3C9305D695563 /* Sources */ = {
+		438E8AFE68EF9EA16FDC07BC7B87E18D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8E99ABFE45B3477CCA0B0BC3C222F7C /* NavigationField.swift in Sources */,
-				306FD00DE960D6D728C20224B4C5DC44 /* NavigationFieldImplementations.swift in Sources */,
-				2D1BC36667890BEF328A2600CEE58A54 /* NavigationFieldInternal.swift in Sources */,
-				145F280253336D1450E3FDD0A17B7CB5 /* NavigationFieldToolbar.swift in Sources */,
-				10A63CB655F700A068FE37F0613BF8E5 /* NavigationFieldToolbarButtonItem.swift in Sources */,
-				471B13C57820A5029079CB36BCF8D5B0 /* UITextField-Navigation-dummy.m in Sources */,
-				ED898E8066D32A7D15F8F8C8C2729CFE /* WeakObjectContainer.swift in Sources */,
+				F0A6A82FDA14293A039AB766685A3FEA /* Pods-Simple Fuel Logger-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9298AE82E7D578D4A373B80DC10820E /* Sources */ = {
+		4684A2CEE887EDF6F1D293ED969B4140 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E98EB32C35DB45D5B1F5CD569AA3C64 /* Pods-Simple Fuel Logger-dummy.m in Sources */,
+				097A0129A3C7860582BEF71E9EF9EC4F /* BarDrawingLayer.swift in Sources */,
+				AEC235F20DF4B6057E5F2B5CFE742AFA /* BarPlot.swift in Sources */,
+				790F77DFBAF49D4205507626877BB30A /* DotDrawingLayer.swift in Sources */,
+				021694AF6A87960EF82D51DCD198A31B /* DotPlot.swift in Sources */,
+				457F9F0A644E927AFACD2A2F1DF939D8 /* FillDrawingLayer.swift in Sources */,
+				ABB98C6F3F24711AD76144E17BF1FA63 /* GradientDrawingLayer.swift in Sources */,
+				E756121FF6186AFBA99C49372E05F361 /* GraphPoint.swift in Sources */,
+				BDE185171DC724189DFFB397E2939228 /* GraphPointAnimation.swift in Sources */,
+				B051652D61E8AB28EB1ACA1C92D1D68C /* LabelPool.swift in Sources */,
+				EDAD3D9291900953AB7AA8852DF1DF6B /* LineDrawingLayer.swift in Sources */,
+				2D0186B6FF73A4424E1710B14EDA2E01 /* LinePlot.swift in Sources */,
+				036705FFF394C5B77AF1C5C98A815CFD /* Plot.swift in Sources */,
+				20385551930CB09A0FA8AFABE116259C /* ReferenceLineDrawingView.swift in Sources */,
+				3CF62EFCBFB122DA1BD126F83692FF85 /* ReferenceLines.swift in Sources */,
+				A35EDB1E99C0233F60687D8EB6A337ED /* ScrollableGraphView-dummy.m in Sources */,
+				879171E3B263F3A8349DDD171D48FEB3 /* ScrollableGraphView.swift in Sources */,
+				0218B1B991966FB5A425AB19C7A8A864 /* ScrollableGraphViewDataSource.swift in Sources */,
+				770172C4433F7BD06E018DF70DA1F0A3 /* ScrollableGraphViewDrawingDelegate.swift in Sources */,
+				2FF0C4A1024E1178D81422A874B1B896 /* ScrollableGraphViewDrawingLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E19D06442E8038038F8510A7FC2F79FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B9013052851192DB69F21AC0FDD7E2 /* NavigationField.swift in Sources */,
+				B60119A6BD0F8DBDE1FDC9B0EB6C4107 /* NavigationFieldImplementations.swift in Sources */,
+				E4FA8FDD7142C64AE0E3DDF7961F7D5F /* NavigationFieldInternal.swift in Sources */,
+				C3E2A5238A760EE412BF4B9179BF15AB /* NavigationFieldToolbar.swift in Sources */,
+				C1766DAB588354C8841DD3A9CA8F2AFC /* NavigationFieldToolbarButtonItem.swift in Sources */,
+				291325983BCDF1DA33F05F3F5F8FEDDA /* UITextField-Navigation-dummy.m in Sources */,
+				EF031F48CDC6B88A69EE351F504D7FEA /* WeakObjectContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DAADE846A63B3288C5ED1A72B9073F3F /* PBXTargetDependency */ = {
+		D07902CD585B24AE68C9C3B1B833792C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UITextField-Navigation";
-			target = 5623E89CCBCD47B63576FF758108F45A /* UITextField-Navigation */;
-			targetProxy = C7C7002B24C595EE458F3E125A2467E9 /* PBXContainerItemProxy */;
+			target = 00FEF161F6D7781157A4C8445C301D57 /* UITextField-Navigation */;
+			targetProxy = 0F1C4FFA3C981C6DE8F68F5BCCF2B769 /* PBXContainerItemProxy */;
+		};
+		E34612CBCCBF3C25F58C5C30FAB27A52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ScrollableGraphView;
+			target = 901E17CA00730EEA9EA7F5B47AAED21A /* ScrollableGraphView */;
+			targetProxy = DF2DB882381B99F3038E427C21624944 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		24D6AE4EBDA1F4ED3B05B3F9304D5910 /* Debug */ = {
+		33108A24C80888F2E861495419B796CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36C80AD791456309373BF6D346E5E671 /* UITextField-Navigation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITextField-Navigation/UITextField-Navigation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITextField-Navigation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITextField-Navigation/UITextField-Navigation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UITextField_Navigation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6D51AF1EDB5B984A41275BC6DF78EC91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36C80AD791456309373BF6D346E5E671 /* UITextField-Navigation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITextField-Navigation/UITextField-Navigation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITextField-Navigation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITextField-Navigation/UITextField-Navigation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UITextField_Navigation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		92B2AC37E786D7A538ACE5FC8FE3F466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F47637B73D53BC7337DDE5EAB198EB /* Pods-Simple Fuel Logger.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Simple Fuel Logger/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Simple_Fuel_Logger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		97803B46811A9BDB5E70FA1303AFBFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B2443C81781FC7D946BF22F3D774631B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E5399B99513D0CAA7F0CB213FB717A1 /* Pods-Simple Fuel Logger.debug.xcconfig */;
 			buildSettings = {
@@ -338,171 +661,6 @@
 			};
 			name = Debug;
 		};
-		2F6414CD2A7E31C5BE54A0F5D34CB825 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE03902BBB62AE43B00B9A0D48C8252C /* UITextField-Navigation.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UITextField-Navigation/UITextField-Navigation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UITextField-Navigation/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UITextField-Navigation/UITextField-Navigation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = UITextField_Navigation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7D08B00DBB77DD8CF374B0D46138B518 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98F47637B73D53BC7337DDE5EAB198EB /* Pods-Simple Fuel Logger.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Simple Fuel Logger/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Simple_Fuel_Logger;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		911C954C025B964992FB389D1FDF12AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE03902BBB62AE43B00B9A0D48C8252C /* UITextField-Navigation.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UITextField-Navigation/UITextField-Navigation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UITextField-Navigation/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UITextField-Navigation/UITextField-Navigation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = UITextField_Navigation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		97803B46811A9BDB5E70FA1303AFBFFE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
 		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -513,9 +671,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -523,20 +679,14 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -555,18 +705,79 @@
 			};
 			name = Release;
 		};
+		CC3ED30B8B2DA3C6887FF78F5DF53DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 303C501D435AF4C02531A7D8709AB718 /* ScrollableGraphView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ScrollableGraphView/ScrollableGraphView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScrollableGraphView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ScrollableGraphView/ScrollableGraphView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ScrollableGraphView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2456BD79EE233A63FDC2F63299F5708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 303C501D435AF4C02531A7D8709AB718 /* ScrollableGraphView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ScrollableGraphView/ScrollableGraphView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScrollableGraphView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ScrollableGraphView/ScrollableGraphView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ScrollableGraphView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13207BB0BC0F6332883469F5A051ACCA /* Build configuration list for PBXNativeTarget "UITextField-Navigation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2F6414CD2A7E31C5BE54A0F5D34CB825 /* Debug */,
-				911C954C025B964992FB389D1FDF12AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -576,11 +787,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6F15D6B4D3532D1B36C7307F8F8EA3D /* Build configuration list for PBXNativeTarget "Pods-Simple Fuel Logger" */ = {
+		2EF2CE4F46669828C78BB8E2DE7AD971 /* Build configuration list for PBXNativeTarget "UITextField-Navigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				24D6AE4EBDA1F4ED3B05B3F9304D5910 /* Debug */,
-				7D08B00DBB77DD8CF374B0D46138B518 /* Release */,
+				33108A24C80888F2E861495419B796CD /* Debug */,
+				6D51AF1EDB5B984A41275BC6DF78EC91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8979912A42356DBA384030D78960306F /* Build configuration list for PBXNativeTarget "Pods-Simple Fuel Logger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2443C81781FC7D946BF22F3D774631B /* Debug */,
+				92B2AC37E786D7A538ACE5FC8FE3F466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1090E77961D5F13DE31C302EC49B5E6 /* Build configuration list for PBXNativeTarget "ScrollableGraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2456BD79EE233A63FDC2F63299F5708 /* Debug */,
+				CC3ED30B8B2DA3C6887FF78F5DF53DDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

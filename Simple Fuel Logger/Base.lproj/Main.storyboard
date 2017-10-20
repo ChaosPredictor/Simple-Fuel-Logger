@@ -253,7 +253,7 @@
         <!--Graph-->
         <scene sceneID="Vot-vo-QUh">
             <objects>
-                <viewController title="Graph" id="zAw-uA-xyU" sceneMemberID="viewController">
+                <viewController title="Graph" id="zAw-uA-xyU" customClass="GraphViewController" customModule="Simple_Fuel_Logger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mu7-mx-ImS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -446,7 +446,6 @@
         <image name="list7" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KWd-A8-z9m"/>
         <segue reference="qDR-6I-Yc0"/>
     </inferredMetricsTieBreakers>
 </document>

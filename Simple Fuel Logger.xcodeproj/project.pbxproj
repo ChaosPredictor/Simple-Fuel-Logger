@@ -21,6 +21,7 @@
 		AFCC628B1F84360900CFA959 /* Pods-Simple Fuel Logger.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A68B8CC7A9556E85D3F56E0A /* Pods-Simple Fuel Logger.debug.xcconfig */; };
 		AFCC628C1F84360C00CFA959 /* Pods-Simple Fuel Logger.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 63C1556A5C8C1596EA48B104 /* Pods-Simple Fuel Logger.release.xcconfig */; };
 		AFCC628E1F84368A00CFA959 /* Pods_Simple_Fuel_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC74C44B7A240DE9745FC099 /* Pods_Simple_Fuel_Logger.framework */; };
+		AFEE55BB1F9A993700AB37F2 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE55BA1F9A993700AB37F2 /* GraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		AFBDB63D1F97A9F400C45B42 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		AFC34A801F879DD600DE9B16 /* RefuelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuelTableViewCell.swift; sourceTree = "<group>"; };
 		AFC34A821F8808E100DE9B16 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		AFEE55BA1F9A993700AB37F2 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		EC74C44B7A240DE9745FC099 /* Pods_Simple_Fuel_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Fuel_Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 				AFC34A821F8808E100DE9B16 /* ListViewController.swift */,
 				AFC34A801F879DD600DE9B16 /* RefuelTableViewCell.swift */,
 				AF2E1ED61F8CB527005C9116 /* CheckBox.swift */,
+				AFEE55BA1F9A993700AB37F2 /* GraphViewController.swift */,
 				AF177F3E1F7C37CE00CE7899 /* Assets.xcassets */,
 				AF177F401F7C37CE00CE7899 /* LaunchScreen.storyboard */,
 				AF177F431F7C37CE00CE7899 /* Info.plist */,
@@ -221,10 +224,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Simple Fuel Logger/Pods-Simple Fuel Logger-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextField-Navigation/UITextField_Navigation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextField_Navigation.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFEE55BB1F9A993700AB37F2 /* GraphViewController.swift in Sources */,
 				AF177F3A1F7C37CE00CE7899 /* RefuelViewController.swift in Sources */,
 				AF177F381F7C37CE00CE7899 /* AppDelegate.swift in Sources */,
 				AFBDB63C1F977C2A00C45B42 /* ExtensionDouble.swift in Sources */,

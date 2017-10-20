@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5623E89CCBCD47B63576FF758108F45A"
+               BlueprintIdentifier = "00FEF161F6D7781157A4C8445C301D57"
                BuildableName = "UITextField_Navigation.framework"
                BlueprintName = "UITextField-Navigation"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5623E89CCBCD47B63576FF758108F45A"
+            BlueprintIdentifier = "00FEF161F6D7781157A4C8445C301D57"
             BuildableName = "UITextField_Navigation.framework"
             BlueprintName = "UITextField-Navigation"
             ReferencedContainer = "container:Pods.xcodeproj">
