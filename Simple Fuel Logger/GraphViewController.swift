@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import ScrollableGraphView
 
 class GraphViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //let graphView = ScrollableGraphView(frame: frame, dataSource: self)
 
         // Do any additional setup after loading the view.
     }

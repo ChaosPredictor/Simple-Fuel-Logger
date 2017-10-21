@@ -6,6 +6,8 @@ target 'Simple Fuel Logger' do
   use_frameworks!
 
   pod 'UITextField-Navigation'
-  pod 'ScrollableGraphView'
+  #pod 'ScrollableGraphView'
+  #pod 'SwiftGraph'
+  pod 'Charts'
 
 end

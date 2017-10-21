@@ -4,14 +4,14 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Simple Fuel Logger.xcscheme</key>
+		<key>Charts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>ScrollableGraphView.xcscheme</key>
+		<key>Pods-Simple Fuel Logger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

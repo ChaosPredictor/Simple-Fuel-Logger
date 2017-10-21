@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A197A7A4B67E55BA63FC99DD82619AF0"
+               BlueprintIdentifier = "CA8EFCD8735BAB4264DC6012FB5F1360"
                BuildableName = "Pods_Simple_Fuel_Logger.framework"
                BlueprintName = "Pods-Simple Fuel Logger"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A197A7A4B67E55BA63FC99DD82619AF0"
+            BlueprintIdentifier = "CA8EFCD8735BAB4264DC6012FB5F1360"
             BuildableName = "Pods_Simple_Fuel_Logger.framework"
             BlueprintName = "Pods-Simple Fuel Logger"
             ReferencedContainer = "container:Pods.xcodeproj">

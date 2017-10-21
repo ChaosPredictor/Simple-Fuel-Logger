@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00FEF161F6D7781157A4C8445C301D57"
+               BlueprintIdentifier = "ED5683528412463E237B3627639F7CAC"
                BuildableName = "UITextField_Navigation.framework"
                BlueprintName = "UITextField-Navigation"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00FEF161F6D7781157A4C8445C301D57"
+            BlueprintIdentifier = "ED5683528412463E237B3627639F7CAC"
             BuildableName = "UITextField_Navigation.framework"
             BlueprintName = "UITextField-Navigation"
             ReferencedContainer = "container:Pods.xcodeproj">
