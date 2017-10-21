@@ -257,13 +257,38 @@
                     <view key="view" contentMode="scaleToFill" id="Mu7-mx-ImS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpk-6A-HOw" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="20" width="374" height="348"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3F-xT-27s" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="368" width="374" height="348"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kpk-6A-HOw" firstAttribute="leading" secondItem="V5N-hl-mff" secondAttribute="leading" constant="20" id="08W-IE-fwn"/>
+                            <constraint firstItem="L3F-xT-27s" firstAttribute="height" secondItem="kpk-6A-HOw" secondAttribute="height" id="2Zb-1i-Lzh"/>
+                            <constraint firstItem="L3F-xT-27s" firstAttribute="top" secondItem="kpk-6A-HOw" secondAttribute="bottom" id="ARO-9y-I2G"/>
+                            <constraint firstItem="V5N-hl-mff" firstAttribute="trailing" secondItem="L3F-xT-27s" secondAttribute="trailing" constant="20" id="Kuv-eV-xmk"/>
+                            <constraint firstItem="kpk-6A-HOw" firstAttribute="top" secondItem="V5N-hl-mff" secondAttribute="top" id="O9j-CT-nlP"/>
+                            <constraint firstItem="V5N-hl-mff" firstAttribute="trailing" secondItem="kpk-6A-HOw" secondAttribute="trailing" constant="20" id="ffx-em-zSa"/>
+                            <constraint firstItem="V5N-hl-mff" firstAttribute="bottom" secondItem="L3F-xT-27s" secondAttribute="bottom" constant="20" id="neC-2Z-u0B"/>
+                            <constraint firstItem="L3F-xT-27s" firstAttribute="top" secondItem="kpk-6A-HOw" secondAttribute="bottom" id="voo-sj-rQ0"/>
+                            <constraint firstItem="L3F-xT-27s" firstAttribute="leading" secondItem="V5N-hl-mff" secondAttribute="leading" constant="20" id="zG5-ym-s04"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V5N-hl-mff"/>
                     </view>
+                    <connections>
+                        <outlet property="lineChartView" destination="L3F-xT-27s" id="3fe-6u-d5e"/>
+                        <outlet property="pieChartView" destination="kpk-6A-HOw" id="Feb-1j-7iw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vva-6c-4VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="130"/>
+            <point key="canvasLocation" x="1237.68115942029" y="129.61956521739131"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Nz5-W5-0Rn">
