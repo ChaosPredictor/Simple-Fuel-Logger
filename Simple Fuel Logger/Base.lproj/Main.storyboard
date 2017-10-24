@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PQN-Dz-wLr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Sp-hO-xeB">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -259,11 +259,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpk-6A-HOw" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="20" width="374" height="348"/>
+                                <rect key="frame" x="20" y="20" width="374" height="338"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3F-xT-27s" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="368" width="374" height="348"/>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3F-xT-27s" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="358" width="374" height="338"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -275,7 +275,7 @@
                             <constraint firstItem="V5N-hl-mff" firstAttribute="trailing" secondItem="L3F-xT-27s" secondAttribute="trailing" constant="20" id="Kuv-eV-xmk"/>
                             <constraint firstItem="kpk-6A-HOw" firstAttribute="top" secondItem="V5N-hl-mff" secondAttribute="top" id="O9j-CT-nlP"/>
                             <constraint firstItem="V5N-hl-mff" firstAttribute="trailing" secondItem="kpk-6A-HOw" secondAttribute="trailing" constant="20" id="ffx-em-zSa"/>
-                            <constraint firstItem="V5N-hl-mff" firstAttribute="bottom" secondItem="L3F-xT-27s" secondAttribute="bottom" constant="20" id="neC-2Z-u0B"/>
+                            <constraint firstItem="V5N-hl-mff" firstAttribute="bottom" secondItem="L3F-xT-27s" secondAttribute="bottom" constant="40" id="neC-2Z-u0B"/>
                             <constraint firstItem="L3F-xT-27s" firstAttribute="top" secondItem="kpk-6A-HOw" secondAttribute="bottom" id="voo-sj-rQ0"/>
                             <constraint firstItem="L3F-xT-27s" firstAttribute="leading" secondItem="V5N-hl-mff" secondAttribute="leading" constant="20" id="zG5-ym-s04"/>
                         </constraints>
@@ -304,6 +304,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GP-hw-RZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1238" y="885"/>
+        </scene>
+        <!--Graphs Table View Controller-->
+        <scene sceneID="yeA-ca-TYy">
+            <objects>
+                <tableViewController id="4Sp-hO-xeB" customClass="GraphsTableViewController" customModule="Simple_Fuel_Logger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jdR-qm-GJ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="253" id="SzN-OA-abE" customClass="GraphTableViewCell" customModule="Simple_Fuel_Logger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="253"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SzN-OA-abE" id="bEd-7j-H7d">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="252.66666666666666"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-R1-aYv">
+                                            <rect key="frame" x="39" y="38" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label1" destination="Dqj-R1-aYv" id="Pwr-Ld-Z8n"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <connections>
+                        <outlet property="graphTable" destination="jdR-qm-GJ4" id="5zV-ph-lhL"/>
+                        <outlet property="view" destination="jdR-qm-GJ4" id="gN6-4y-UBY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1j-9e-eAt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2123" y="109"/>
         </scene>
         <!--Refuel list-->
         <scene sceneID="wgA-Wv-L3X">

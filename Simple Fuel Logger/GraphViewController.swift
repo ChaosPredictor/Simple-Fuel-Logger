@@ -22,7 +22,7 @@ class GraphViewController: UIViewController {
         // Do any additional setup after loading the view.
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
+        let unitsSold = [20.0, 4.0, 6.0, 0.0, 12.0, 16.0]
         
         setChart(labels: months, values: unitsSold)
     }
@@ -35,16 +35,10 @@ class GraphViewController: UIViewController {
     
     func setChart(labels: [String], values: [Double]) {
         
-        print(values)
-        //let i = [1, 2, 3, 4, 5, 6]
-        
         let dataEntries = values.enumerated().map { index, value in return PieChartDataEntry(value: value, label: labels[index]) }
 
-        
-        
-        print(dataEntries)
-        
         let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Units Sold")
+        
         pieChartDataSet.colors = [ChartColorTemplates.colorFromString("#52FFA300"), ChartColorTemplates.colorFromString("#52EDB521") , ChartColorTemplates.colorFromString("#52DBC742"), ChartColorTemplates.colorFromString("#52C9D963") , ChartColorTemplates.colorFromString("#52B7EA84"), ChartColorTemplates.colorFromString("#52A5FFA6") ]
         pieChartDataSet.valueTextColor = ChartColorTemplates.colorFromString("#FF000000")
 
@@ -65,18 +59,23 @@ class GraphViewController: UIViewController {
             colors.append(color)
         }*/
 
-        var dataEntries2 : [ChartDataEntry] = []
+        var lineDataEntries : [ChartDataEntry] = []
 
          for index in 0..<values.count {
-         let c = ChartDataEntry(x: Double(index), y: values[index])
-            dataEntries2.append(c)
+            let dataEntry = ChartDataEntry(x: Double(index), y: values[index])
+            lineDataEntries.append(dataEntry)
          }
          /*
         pieChartDataSet.colors = colors */
  
-        let lineChartDataSet = LineChartDataSet(values: dataEntries2, label: "Units Sold")
+        let lineChartDataSet = LineChartDataSet(values: lineDataEntries, label: "Units Sold")
         let lineChartData = LineChartData(dataSet: lineChartDataSet)
         //let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+        
+        lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: labels)
+        lineChartView.xAxis.granularity = 1.0
+        lineChartView.xAxis.labelPosition = XAxis.LabelPosition.bothSided
+        lineChartView.backgroundColor = ChartColorTemplates.colorFromString("#FFF3F3F3")
         lineChartView.data = lineChartData
  
     }
